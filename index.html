@@ -2,137 +2,29 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>レトロ風2Dゲーム テストプロトタイプ</title>
-    <style>
-        body {
-            background-color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: 'Courier New', Courier, monospace; /* レトロな等幅フォント */
-        }
-
-        #game-container {
-            width: 800px;
-            height: 600px;
-            background-image: url('image_0.png'); /* 生成された画像を背景に設定 */
-            background-size: cover;
-            position: relative;
-            border: 10px solid #222;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-            image-rendering: pixelated; /* ドット絵をくっきり表示させる */
-        }
-
-        #dialogue-window {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            height: 150px;
-            background-color: rgba(0, 0, 0, 0.8);
-            border: 4px solid #fff;
-            padding: 15px;
-            box-sizing: border-box;
-            color: #fff;
-            font-size: 18px;
-            line-height: 1.6;
-            display: none; /* 初期状態は非表示 */
-        }
-
-        #character-name {
-            font-weight: bold;
-            color: #ffcc00;
-            margin-bottom: 5px;
-        }
-
-        #next-button {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background-color: #ffcc00;
-            color: #333;
-            border: none;
-            padding: 8px 16px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 4px;
-            display: none; /* 初期状態は非表示 */
-        }
-
-        #start-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #ffcc00;
-            color: #333;
-            border: none;
-            padding: 15px 30px;
-            font-size: 24px;
-            cursor: pointer;
-            border-radius: 8px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Adventure Prototype</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div id="game-container">
+        <!-- ゲーム開始前画面 -->
         <button id="start-button">ゲームを開始する</button>
 
-        <div id="dialogue-window">
-            <div id="character-name">AKI</div>
-            <div id="dialogue-text">...</div>
-            <button id="next-button">次へ</button>
+        <!-- 会話UI -->
+        <div id="ui-layer" style="display: none;">
+            <div id="dialogue-window">
+                <div id="character-name"></div>
+                <div id="dialogue-text"></div>
+                
+                <!-- 選択肢コンテナ -->
+                <div id="choices-container"></div>
+                <!-- 次へボタン -->
+                <button id="next-button">▼</button>
+            </div>
         </div>
     </div>
-
-    <script>
-        // 会話のシナリオ
-        const scenario = [
-            { name: "AKI", text: "ここが噂の『喫茶ピクセル』か…。" },
-            { name: "AKI", text: "よし、入ってみよう！" },
-            { name: "???", text: "いらっしゃい。" },
-            { name: "AKI", text: "あ、はい。こんにちは。" },
-            { name: "マスター", text: "初めて見る顔だね。何にする？" }
-        ];
-
-        let currentDialogueIndex = 0;
-
-        const startButton = document.getElementById('start-button');
-        const dialogueWindow = document.getElementById('dialogue-window');
-        const dialogueText = document.getElementById('dialogue-text');
-        const characterName = document.getElementById('character-name');
-        const nextButton = document.getElementById('next-button');
-
-        // ゲーム開始ボタンの処理
-        startButton.addEventListener('click', () => {
-            startButton.style.display = 'none'; // スタートボタンを隠す
-            dialogueWindow.style.display = 'block'; // 会話ウィンドウを表示
-            nextButton.style.display = 'block'; // 次へボタンを表示
-            showNextDialogue(); // 最初の会話を表示
-        });
-
-        // 「次へ」ボタンの処理
-        nextButton.addEventListener('click', () => {
-            currentDialogueIndex++;
-            if (currentDialogueIndex < scenario.length) {
-                showNextDialogue();
-            } else {
-                // 会話が終了した場合
-                dialogueText.textContent = "（会話はここで終わった。）";
-                nextButton.style.display = 'none'; // ボタンを隠す
-            }
-        });
-
-        // 会話を表示する関数
-        function showNextDialogue() {
-            const currentDialogue = scenario[currentDialogueIndex];
-            characterName.textContent = currentDialogue.name;
-            dialogueText.textContent = currentDialogue.text;
-        }
-    </script>
+    
+    <script src="script.js"></script>
 </body>
 </html>

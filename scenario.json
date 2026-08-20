@@ -1,0 +1,55 @@
+{
+  "SCENE_START": {
+    "bg": "bg_cafe.png",
+    "name": "マスター",
+    "text": "いらっしゃい。ここは『喫茶ピクセル』だ。何にするかい？",
+    "choices": [
+      { "text": "コーヒーを頼む", "nextId": "SCENE_COFFEE" },
+      { "text": "奥の扉へ向かう", "nextId": "SCENE_DOOR" }
+    ]
+  },
+  "SCENE_COFFEE": {
+    "bg": "bg_cafe.png",
+    "name": "マスター",
+    "text": "はいよ。…おや、足元に何か落ちているぞ。",
+    "getItem": "銀の鍵",
+    "nextId": "SCENE_GET_KEY"
+  },
+  "SCENE_GET_KEY": {
+    "bg": "bg_cafe.png",
+    "name": "システム",
+    "text": "『銀の鍵』を手に入れた！",
+    "nextId": "SCENE_START"
+  },
+  "SCENE_DOOR": {
+    "bg": "bg_door.png",
+    "name": "AKI",
+    "text": "怪しい扉がある…。調べてみよう。",
+    "nextId": "CHECK_DOOR_LOCK"
+  },
+  "CHECK_DOOR_LOCK": {
+    "condition": {
+      "item": "銀の鍵",
+      "ifTrue": "SCENE_UNLOCK",
+      "ifFalse": "SCENE_LOCKED"
+    }
+  },
+  "SCENE_LOCKED": {
+    "bg": "bg_door.png",
+    "name": "AKI",
+    "text": "鍵がかかっていて開かない。お店の中を探してみよう。",
+    "nextId": "SCENE_START"
+  },
+  "SCENE_UNLOCK": {
+    "bg": "bg_door.png",
+    "name": "システム",
+    "text": "銀の鍵を使った！ガチャリと音がして扉が開いた。",
+    "nextId": "SCENE_ENDING"
+  },
+  "SCENE_ENDING": {
+    "bg": "bg_door.png",
+    "name": "AKI",
+    "text": "よし、中に入ってみよう……。（テストプレイ終了）",
+    "nextId": null
+  }
+}
