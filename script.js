@@ -67,17 +67,9 @@ function renderScene(id) {
             btn.onclick = () => renderScene(choice.nextId);
             choicesContainer.appendChild(btn);
         });
-   
     } else {
-        // 次のシーンがない場合（終了時）
-        // 「最初に戻る」ボタンとして利用する
-        nextButton.style.display = "block";
-        nextButton.textContent = "最初に戻る"; // ボタンの文字を一時的に変更
-        nextButton.onclick = () => {
-            gameState.inventory = []; // 持ち物をリセットする場合
-            renderScene("SCENE_START"); // 最初のシーンIDに戻す
-        };
-    }
+        nextButton.style.display = "none"; // 終了時
+      }
 }
 
 // スタートボタンのイベント
