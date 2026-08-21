@@ -68,8 +68,14 @@ function renderScene(id) {
             choicesContainer.appendChild(btn);
         });
     } else {
-        nextButton.style.display = "none"; // 終了時
-      }
+        // 次のシーンがある場合のみボタンを表示
+        if (data.nextId) {
+            nextButton.style.display = "block";
+            nextButton.onclick = () => renderScene(data.nextId);
+        } else {
+            nextButton.style.display = "none"; // 終了時
+        }
+    }
 }
 
 // スタートボタンのイベント
