@@ -75,6 +75,7 @@ function renderScene(id) {
             nextButton.onclick = () => renderScene(data.nextId);
         } else {
             // 行き止まり・終了時の処理
+            nextButton.style.display = "none"; // 0.次へボタンよ、消えてくれ
             endButton.style.display = "block"; // 1. ボタンを画面に出す
             endButton.textContent = "最初にもどる"; // 2. ボタンの文字を書き換える
             endButton.onclick = () => renderScene("SCENE_START"); // 3. 最初のシーン名を渡す
