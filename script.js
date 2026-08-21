@@ -49,7 +49,7 @@ function renderScene(id) {
     // --- 描画処理 ---
     // 背景画像の変更（指定があれば）
     if (data.bg) {
-        gameContainer.style.backgroundImage = `url('${data.bg}')`;
+        gameContainer.style.backgroundImage = `url('images/${data.bg}')`;
     }
 
     // テキストの更新
