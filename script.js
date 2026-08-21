@@ -73,7 +73,10 @@ function renderScene(id) {
             nextButton.style.display = "block";
             nextButton.onclick = () => renderScene(data.nextId);
         } else {
-            nextButton.style.display = "none"; // 終了時
+            // 行き止まり・終了時の処理
+            nextButton.style.display = "block"; // 1. ボタンを画面に出す
+            nextButton.textContent = "最初にもどる"; // 2. ボタンの文字を書き換える
+            nextButton.onclick = () => renderScene("SCENE_START"); // 3. 最初のシーン名を渡す
         }
     }
 }
