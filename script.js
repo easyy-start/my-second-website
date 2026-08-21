@@ -82,9 +82,17 @@ function renderScene(id) {
 }
 
 // スタートボタンのイベント
+// BGM用の変数を作っておく（ファイル名は用意したものに変えてください）
+const bgm = new Audio("audio/bgm.mp3");
+bgm.loop = true; // ループ再生をオンにする
+
 startButton.addEventListener('click', async () => {
     startButton.style.display = 'none';
     uiLayer.style.display = 'block';
+
+    // ここでBGMを再生！クリックした後なので確実に鳴ります
+    bgm.play();
+    
     await loadGame();
     renderScene(currentId);
 });
