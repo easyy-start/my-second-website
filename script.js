@@ -83,7 +83,7 @@ function renderScene(id) {
 
 // スタートボタンのイベント
 // BGM用の変数を作っておく（ファイル名は用意したものに変えてください）
-const bgm = new Audio("audio/bgm.mp3");
+const bgm = new Audio("audio/suitekinoodori.mp3");
 bgm.loop = true; // ループ再生をオンにする
 
 startButton.addEventListener('click', async () => {
