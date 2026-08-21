@@ -13,6 +13,7 @@ const charName = document.getElementById('character-name');
 const dialogueText = document.getElementById('dialogue-text');
 const choicesContainer = document.getElementById('choices-container');
 const nextButton = document.getElementById('next-button');
+const endButton = document.getElementById('end-button');
 
 // 1. JSONの読み込み
 async function loadGame() {
