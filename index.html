@@ -24,6 +24,22 @@
             </div>
         </div>
     </div>
+
+    <!-- 具体例：背景の上に透明なクリックエリアを置く仕組み -->
+    <div id="game-container" style="background-image: url('library.png'); position: relative;">
+        
+        <!-- 本棚の上に被せる透明なボタン -->
+        <div id="click-bookshelf" style="
+            position: absolute; 
+            top: 200px; 
+            left: 500px; 
+            width: 150px; 
+            height: 200px; 
+            cursor: pointer; 
+            background-color: rgba(255,0,0,0.5); 開発中は色をつけて場所を確認し、本番で透明にする 
+        "></div>
+    
+    </div>
     
     <script src="script.js"></script>
 </body>
