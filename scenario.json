@@ -117,6 +117,7 @@
       "item": "古びた鍵",
       "ifTrue": "SCENE_UNLOCK_MasterRoom",
       "ifFalse": "SCENE_LOCKED_MasterRoom"
+    }  
   },
   "SCENE_UNLOCK_MasterRoom": {
     "bg": "library_gemini.png",
