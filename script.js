@@ -21,6 +21,8 @@ async function loadGame() {
     try {
         const response = await fetch('scenario.json');
         scenarios = await response.json();
+        // ↓すべての背景画像の読み込み
+        preloadImages(scenarios);
     } catch (error) {
         console.error("シナリオの読み込みに失敗しました:", error);
         alert("JSONファイルの読み込みエラーです。ローカルサーバーで起動しているか確認してください。");
