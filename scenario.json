@@ -57,7 +57,7 @@
     "bg": "library_gemini.png",
     "name": "AKI",
     "text": "ここは、図書室か？",
-    "nextId": "SCHENE_SECOND_ROOM"
+    "nextId": "SCENE_SECOND_ROOM"
   },
   "SCENE_SECOND_ROOM": {
     "bg": "library_gemini.png",
