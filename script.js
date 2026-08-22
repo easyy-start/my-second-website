@@ -15,7 +15,7 @@ const choicesContainer = document.getElementById('choices-container');
 const nextButton = document.getElementById('next-button');
 const endButton = document.getElementById('end-button');
 
-// 1. JSONの読み込み
+// 0. JSONの読み込み
 async function loadGame() {
     try {
         const response = await fetch('scenario.json');
@@ -24,6 +24,17 @@ async function loadGame() {
         console.error("シナリオの読み込みに失敗しました:", error);
         alert("JSONファイルの読み込みエラーです。ローカルサーバーで起動しているか確認してください。");
     }
+}
+
+// 1. JSONの背景画像をすべて抽出してロードする
+function preloadImages(data) {
+    // JSONの中から "bg" に指定されている画像パスをすべて抽出（重複はカット）
+    const bgList = [...new Set(Object.values(data).map(scene => scene.bg).filter(Boolean))];
+
+    bgList.forEach(src => {
+        const img = new Image();
+        img.src = src; // ブラウザのキャッシュに保存される
+    });
 }
 
 // 2. シーンの描画
