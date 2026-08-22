@@ -58,6 +58,50 @@
     "name": "AKI",
     "text": "ここは、図書室か？",
     "nextId": "SCHENE_SECOND_ROOM"
+  },
+  "SCENE_SECOND_ROOM": {
+    "bg": "library_gemini.png",
+    "name": "AKI",
+    "text": "どこを調べてみよう...",
+    "choices": [
+      { "text": "本棚", "nextId": "SCENE_BOOKSHELF" },
+      { "text": "観葉植物", "nextId": "SCENE_PLANT" },
+      { "text": "机", "nextId": "SCENE_DESK" }
+    ]
+  }, 
+  "SCENE_BOOKSHELF": {
+    "bg": "library_gemini.png",
+    "name": "AKI",
+    "text": "テーマごとに本棚が分かれている。特に変わったところはない。",
+    "nextId": "SCENE_SECOND_ROOM"
+  },
+  "SCENE_PLANT": {
+    "bg": "library_gemini.png",
+    "name": "AKI",
+    "text": "ふつうの観葉植物だ。特に変わったところはない。",
+    "nextId": "SCENE_PLANT2"
+  },
+  "SCENE_PLANT2": {
+    "bg": "library_gemini.png",
+    "name": "AKI",
+    "text": "どこを調べてみよう...",
+    "choices": [
+      { "text": "本棚", "nextId": "SCENE_BOOKSHELF" },
+      { "text": "観葉植物", "nextId": "SCENE_PLANT_ITEM" },
+      { "text": "机", "nextId": "SCENE_DESK" }
+    ]
+  }, 
+  "SCENE_PLANT_ITEM": {
+    "bg": "library_gemini.png",
+    "name": "AKI",
+    "text": "ふつうの観葉植物だ.....おや？根本が一瞬光った。",
+    "getItem": "古びた鍵",
+    "nextId": "SCENE_SECOND_ROOM"
+  },
+  "SCENE_DESK": {
+    "bg": "library_gemini.png",
+    "name": "AKI",
+    "text": "さっきまで人がいたみたいだ。どこに行ったんだ？",
+    "nextId": null
   }
-  
 }
