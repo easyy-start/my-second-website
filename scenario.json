@@ -49,7 +49,15 @@
   "SCENE_ENDING": {
     "bg": "bg_door.png",
     "name": "AKI",
-    "text": "よし、中に入ってみよう……。（テストプレイ終了）",
-    "nextId": null
+    "text": "よし、中に入ってみよう……。",
+    "nextId": "SCHENE_SECOND"
   }
+
+  "SCENE_SECOND": {
+    "bg": "bg_door.png",
+    "name": "AKI",
+    "text": "ここは、図書室か？",
+    "nextId": "SCHENE_SECOND_ROOM"
+  }
+  
 }
