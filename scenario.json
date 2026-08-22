@@ -140,6 +140,6 @@
     "bg": null, 
     "name": null,
     "text": "マスターは殺人鬼だ",
-    "nextId": "SCENE_MasterRoom_Letter" 
+    "nextId": null 
   }
 }
