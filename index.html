@@ -25,25 +25,6 @@
         </div>
     </div>
 
-    <!-- 1. ゲーム画面の枠（ここを座標の基準にする設定：relative） -->
-    <div id="game-container" style="position: relative; width: 800px; height: 600px; background-image: url('images/bg_door.png');">
-    
-        <!-- 2. クリックできる透明なエリア（座標を指定して配置：absolute） -->
-        <!-- 例：ドアノブの周辺だけをクリック可能にする -->
-        <div id="hotspot-door" style="
-            position: absolute;
-            top: 300px;   /* 上からの位置 */
-            left: 450px;  /* 左からの位置 */
-            width: 80px;  /* クリック判定の幅 */
-            height: 80px; /* クリック判定の高さ */
-            cursor: pointer; /* マウスを乗せると指マークになる */
-            border: 2px solid red; /* ★開発中は赤枠を表示して場所を調整！ */
-        " onclick="clickDoor()"></div>
-    
-    </div>
-
-
-    
     <script src="script.js"></script>
 </body>
 </html>
