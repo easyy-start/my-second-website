@@ -6,6 +6,7 @@ const gameState = {
     inventory: []
 };
 
+// htmlとjs間の対応
 const gameContainer = document.getElementById('game-container');
 const uiLayer = document.getElementById('ui-layer');
 const startButton = document.getElementById('start-button');
