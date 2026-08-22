@@ -50,8 +50,8 @@
     "bg": "bg_door.png",
     "name": "AKI",
     "text": "よし、中に入ってみよう……。",
-    "nextId": "SCHENE_SECOND"
-  }
+    "nextId": "SCENE_SECOND"
+  },
 
   "SCENE_SECOND": {
     "bg": "Library_Gemini.jpg",
