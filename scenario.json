@@ -66,7 +66,8 @@
     "choices": [
       { "text": "本棚", "nextId": "SCENE_BOOKSHELF" },
       { "text": "観葉植物", "nextId": "SCENE_PLANT" },
-      { "text": "机", "nextId": "SCENE_DESK" }
+      { "text": "机", "nextId": "SCENE_DESK" },
+      { "text": "管理人室", "nextId": "CHECK_MasterRoom_Lock" }
     ]
   }, 
   "SCENE_BOOKSHELF": {
@@ -88,7 +89,8 @@
     "choices": [
       { "text": "本棚", "nextId": "SCENE_BOOKSHELF" },
       { "text": "観葉植物", "nextId": "SCENE_PLANT_ITEM" },
-      { "text": "机", "nextId": "SCENE_DESK" }
+      { "text": "机", "nextId": "SCENE_DESK" },
+      { "text": "管理人室", "nextId": "CHECK_MasterRoom_Lock" }
     ]
   }, 
   "SCENE_PLANT_ITEM": {
@@ -109,5 +111,35 @@
     "name": "AKI",
     "text": "さっきまで人がいたみたいだ。どこに行ったんだ？",
     "nextId": "SCENE_SECOND_ROOM" 
-  }
+  },
+  "CHECK_MasterRoom_Lock": {
+    "condition": {
+      "item": "古びた鍵",
+      "ifTrue": "SCENE_UNLOCK_MasterRoom",
+      "ifFalse": "SCENE_LOCKED_MasterRoom"
+  },
+  "SCENE_UNLOCK_MasterRoom": {
+    "bg": "library_gemini.png",
+    "name": "システム",
+    "text": "古びた鍵を使った！ギギギと音を立てながらドアが開いた。",
+    "nextId": "SCENE_MasterRoom"
+  },
+   "SCENE_LOCKED_MasterRoom": {
+    "bg": "library_gemini.png",
+    "name": "システム",
+    "text": "鍵がかかっていて開かない。もう一度図書室を調べてみよう。",
+    "nextId": "SCENE_SECOND_ROOM"
+  },
+  "SCENE_MasterRoom": {
+    "bg": "library_gemini.png",
+    "name": "AKI",
+    "text": "机の上に手紙が置いてある、なんだろう",
+    "nextId": "SCENE_MasterRoom_Letter" 
+  },  
+  "SCENE_MasterRoom_Letter": {
+    "bg": null, 
+    "name": null,
+    "text": "マスターは殺人鬼だ",
+    "nextId": "SCENE_MasterRoom_Letter" 
+  }, 
 }
