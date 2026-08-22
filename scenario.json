@@ -96,12 +96,18 @@
     "name": "AKI",
     "text": "ふつうの観葉植物だ.....おや？根本が一瞬光った。",
     "getItem": "古びた鍵",
+    "nextId": "SCENE_GetItem_OldKey"
+  },
+  "SCENE_GetItem_OldKey": {
+    "bg": "library_gemini.png",
+    "name": "システム",
+    "text": "『古びた鍵』を手に入れた！",
     "nextId": "SCENE_SECOND_ROOM"
   },
   "SCENE_DESK": {
     "bg": "library_gemini.png",
     "name": "AKI",
     "text": "さっきまで人がいたみたいだ。どこに行ったんだ？",
-    "nextId": null
+    "nextId": "SCENE_SECOND_ROOM" 
   }
 }
