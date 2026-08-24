@@ -1,10 +1,10 @@
 {
   "SCENE_START": {
     "bg": "bg_cafe.png",
-    "name": "マスター",
-    "text": "いらっしゃい。ここは『喫茶ピクセル』だ。何にするかい？",
+    "name": "あなた",
+    "text": "ここはどこだ？俺は何をしていた？",
     "choices": [
-      { "text": "コーヒーを頼む", "nextId": "SCENE_COFFEE" },
+      { "text": "", "nextId": "SCENE_COFFEE" },
       { "text": "奥の扉へ向かう", "nextId": "SCENE_DOOR" }
     ]
   },
