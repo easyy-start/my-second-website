@@ -12,10 +12,10 @@
         <button id="start-button">ゲームを開始する</button>
 
         <!-- 透明セル、当たり判定制作 -->
-        <div id="hotspots-layer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+        <div id="hotspots-layer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10;"></div>
 
         <!-- 会話UI -->
-        <div id="ui-layer" style="display: none;">
+        <div id="ui-layer" style="display: none; z-index: 20;">
             <div id="dialogue-window">
                 <div id="character-name"></div>
                 <div id="dialogue-text"></div>
