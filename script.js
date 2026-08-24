@@ -117,6 +117,7 @@ function renderScene(id) {
             
             hotspotsLayer.appendChild(div);
         });
+    }    
 }
 
 // スタートボタンのイベント
