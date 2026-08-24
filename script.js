@@ -43,10 +43,6 @@ function preloadImages(data) {
 // レイヤー取得（当たり判定）
 const hotspotsLayer = document.getElementById('hotspots-layer');
 
-function renderScene(id) {
-    const data = scenarios[id];
-    if (!data) return;
-
 // 2. シーンの描画
 function renderScene(id) {
     const data = scenarios[id];
@@ -100,7 +96,27 @@ function renderScene(id) {
             nextButton.textContent = "最初にもどる"; // 2. ボタンの文字を書き換える
             nextButton.onclick = () => renderScene("SCENE_START"); // 3. 最初のシーン名を渡す
         }
-    }
+    };
+
+    // 場面切り替え時の、当たり判定の消去・生成
+    if (data.hotspots) {
+        data.hotspots.forEach(spot => {
+            const div = document.createElement('div');
+            div.style.position = 'absolute';
+            div.style.left = spot.x + 'px';
+            div.style.top = spot.y + 'px';
+            div.style.width = spot.width + 'px';
+            div.style.height = spot.height + 'px';
+            div.style.cursor = 'pointer';
+            
+            // ★開発中は以下の行を生かして赤枠を表示。本番では削除（またはコメントアウト）して透明にする！
+            div.style.border = '2px solid red'; 
+
+            // クリックされたら指定されたIDのシーンへ飛ぶ
+            div.onclick = () => renderScene(spot.actionId);
+            
+            hotspotsLayer.appendChild(div);
+        });
 }
 
 // スタートボタンのイベント
