@@ -40,6 +40,13 @@ function preloadImages(data) {
     });
 }
 
+// レイヤー取得（当たり判定）
+const hotspotsLayer = document.getElementById('hotspots-layer');
+
+function renderScene(id) {
+    const data = scenarios[id];
+    if (!data) return;
+
 // 2. シーンの描画
 function renderScene(id) {
     const data = scenarios[id];
