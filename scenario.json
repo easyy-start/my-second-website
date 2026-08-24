@@ -6,7 +6,7 @@
     "choices": [
       { "text": "", "nextId": "SCENE_COFFEE" },
       { "text": "奥の扉へ向かう", "nextId": "SCENE_DOOR" }
-    ]
+    ],
     "hotspots": [
       {
         "x": 350,
