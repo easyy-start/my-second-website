@@ -73,6 +73,9 @@ function renderScene(id) {
     charName.textContent = data.name || "";
     dialogueText.textContent = data.text || "";
 
+    //次へボタンの更新
+    nextButton.textContent = "▼"; 
+
     // 選択肢のクリア
     choicesContainer.innerHTML = "";
 
