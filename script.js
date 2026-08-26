@@ -106,7 +106,9 @@ function renderScene(id) {
         }
     };
 
-    // 場面切り替え時の、当たり判定の消去・生成
+    //場面切り替え時の、当たり判定の消去
+    hotspotsLayer.innerHTML = "";
+    // 場面切り替え時の、当たり判定の生成
     if (data.hotspots) {
         data.hotspots.forEach(spot => {
             const div = document.createElement('div');
