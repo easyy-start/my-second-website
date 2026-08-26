@@ -81,6 +81,13 @@
         "width": 102,
         "height": 127,
         "actionId": "check_memo"
+      },
+      {
+        "x": 300,
+        "y": 300,
+        "width": 153,
+        "height": 47,
+        "actionId": "SCENE_fir_N"
       }
     ]
   },
