@@ -15,8 +15,8 @@
     "bg": "1st_N.png",
     "hotspots": [
       {
-        "x": 500,
-        "y": 250,
+        "x": 348,
+        "y": 257,
         "width": 100,
         "height": 150,
         "actionId": "check_door_password"
