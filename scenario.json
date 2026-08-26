@@ -84,6 +84,58 @@
       }
     ]
   },
+  "SCENE_fir_S": {
+    "bg": "1st_S.png",
+    "hotspots": [
+      {
+        "x": 348,
+        "y": 257,
+        "width": 52,
+        "height": 27,
+        "actionId": "check_door_password"
+      },
+      {
+        "x": 543,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_fir_W"
+      },
+      {
+        "x": 0,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_fir_E"
+      }
+    ]
+  },
+  "SCENE_fir_E": {
+    "bg": "1st_E.png",
+    "hotspots": [
+      {
+        "x": 348,
+        "y": 257,
+        "width": 52,
+        "height": 27,
+        "actionId": "check_door_password"
+      },
+      {
+        "x": 543,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_fir_S"
+      },
+      {
+        "x": 0,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_fir_N"
+      }
+    ]
+  },
 
   
 
