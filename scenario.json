@@ -4,7 +4,7 @@
     "name": "あなた",
     "text": "ここはどこだ？俺は何をしていた？",
     "choices": [
-      { "text": "", "nextId": "SCENE_COFFEE" },
+      { "text": "コーヒーを頼む", "nextId": "SCENE_COFFEE" },
       { "text": "奥の扉へ向かう", "nextId": "SCENE_DOOR" }
     ],
     "hotspots": [
