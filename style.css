@@ -109,7 +109,7 @@ body {
     background: transparent; /* 完全な透明に */
     border: none; /* ボーダーは親要素(#ui-layer)に任せる */
     cursor: pointer;
-    z-index: 60; /* テキストより手前、選択肢ボタンよりは奥にするなどの調整用 */
+    z-index: 100; /* テキストより手前、選択肢ボタンよりは奥にするなどの調整用 */
     display: none;
 }
     
