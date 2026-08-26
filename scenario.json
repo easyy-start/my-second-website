@@ -26,7 +26,7 @@
   "look_door_password": {
     "bg": "1st_N.png",
     "text": "パスワードを入力できるようだ。",
-    "nextId": "check_door_password"
+    "nextId": "SCENE_SAFE"
   },
 
 
@@ -183,5 +183,27 @@
         "actionId": "CHECK_DOOR_LOCK"
       }
     ]
+  },
+  "SCENE_SAFE": {
+    "bg": "library_gemini.png",
+    "name": "AKI",
+    "text": "金庫がある。4桁の暗証番号が必要みたいだ。",
+    "passwordCheck": {
+      "correctAnswer": "0827",
+      "ifTrue": "SCENE_SAFE_OPEN",
+      "ifFalse": "SCENE_SAFE_WRONG"
+    }
+  },
+  "SCENE_SAFE_OPEN": {
+    "bg": "library_gemini.png",
+    "name": "システム",
+    "text": "『カチャッ』という音がして、金庫が開いた！",
+    "nextId": "SCENE_GET_KEY2"
+  },
+  "SCENE_SAFE_WRONG": {
+    "bg": "library_gemini.png",
+    "name": "システム",
+    "text": "『ブブーッ！』エラー音が鳴った。暗証番号が違うようだ。",
+    "nextId": "SCENE_SAFE"
   }
 }
