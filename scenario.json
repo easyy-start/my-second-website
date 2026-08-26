@@ -240,77 +240,79 @@
         "actionId": "check_door_password2"
       },
       {
-        "x": 200,
-        "y": 200,
-        "width": 200,
-        "height": 200,
+        "x": 350,
+        "y": 182,
+        "width": 15,
+        "height": 16,
         "actionId": "check_fly1"
       },
       {
-        "x": 300,
-        "y": 250,
-        "width": 53,
-        "height": 47,
+        "x": 434,
+        "y": 326,
+        "width": 15,
+        "height": 16,
         "actionId": "check_fly2"
       },
       {
-        "x": 543,
-        "y": 290,
-        "width": 53,
-        "height": 47,
+        "x": 56,
+        "y": 319,
+        "width": 160,
+        "height": 109,
         "actionId": "check_tacos"
       },
       {
-        "x": 0,
-        "y": 290,
-        "width": 53,
-        "height": 47,
+        "x": 492,
+        "y": 439,
+        "width": 103,
+        "height": 109,
         "actionId": "check_hamburger"
       },
       {
-        "x": 348,
-        "y": 257,
-        "width": 52,
-        "height": 27,
+        "x": 386,
+        "y": 408,
+        "width": 95,
+        "height": 60,
         "actionId": "check_carrot"
       },
       {
-        "x": 543,
-        "y": 290,
-        "width": 53,
-        "height": 47,
+        "x": 375,
+        "y": 477,
+        "width": 81,
+        "height": 70,
         "actionId": "check_apple"
       },
       {
-        "x": 0,
-        "y": 290,
-        "width": 53,
-        "height": 47,
+        "x": 285,
+        "y": 435,
+        "width": 98,
+        "height": 102,
         "actionId": "check_pumpkinpie"
       },
       {
-        "x": 0,
-        "y": 290,
-        "width": 53,
-        "height": 47,
+        "x": 155,
+        "y": 427,
+        "width": 135,
+        "height": 102,
         "actionId": "check_pizza"
       },
       {
-        "x": 348,
-        "y": 257,
-        "width": 52,
-        "height": 27,
+        "x": 13,
+        "y": 459,
+        "width": 149,
+        "height": 68,
         "actionId": "check_chicken"
       },
       {
-        "x": 543,
-        "y": 290,
-        "width": 53,
-        "height": 47,
+        "x": 3,
+        "y": 404,
+        "width": 44,
+        "height": 58,
         "actionId": "check_knife"
       }
     ]
   },
+
+  
   "SCENE_sec_E": {
     "bg": "2nd_E.png",
     "hotspots": [
