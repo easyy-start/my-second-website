@@ -69,18 +69,18 @@
         "actionId": "SCENE_fir_S"
       },
       {
-        "x": 400,
-        "y": 400,
-        "width": 53,
-        "height": 47,
-        "actionId": "SCENE_fir_N"
+        "x": 44,
+        "y": 151,
+        "width": 94,
+        "height": 88,
+        "actionId": "check_clock"
       },
       {
-        "x": 100,
-        "y": 100,
-        "width": 53,
-        "height": 47,
-        "actionId": "SCENE_fir_S"
+        "x": 277,
+        "y": 289,
+        "width": 102,
+        "height": 127,
+        "actionId": "check_memo"
       }
     ]
   },
