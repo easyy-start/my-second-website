@@ -9,9 +9,9 @@
     "bg": "1st_N.png",
     "name": "あなた",
     "text": "「とにかく家に帰らないと、もうすぐアニメ始まっちゃう！」",
-    "nextId": "SCENE_LETSGO"
+    "nextId": "SCENE_fir_N"
   },
-  "SCENE_LETSGO": {
+  "SCENE_fir_N": {
     "bg": "1st_N.png",
     "hotspots": [
       {
@@ -35,7 +35,7 @@
   "SCENE_fir_closed": {
     "bg": "1st_N.png",
     "text": "パスワードが違うようだ。",
-    "nextId": "SCENE_LETSGO"
+    "nextId": "SCENE_fir_N"
   },
 
 
