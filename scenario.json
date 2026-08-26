@@ -2,11 +2,17 @@
   "SCENE_START": {
     "bg": "1st_N.png",
     "name": "あなた",
-    "text": "ここはどこだ？俺は何をしていた？",
-    "choices": [
-      { "text": "コーヒーを頼む", "nextId": "SCENE_COFFEE" },
-      { "text": "奥の扉へ向かう", "nextId": "SCENE_DOOR" }
-    ],
+    "text": "「ここはどこだ？俺は何をしていた？」",
+    "nextId": "SCENE_START2"
+  },
+  "SCENE_START2": {
+    "bg": "1st_N.png",
+    "name": "あなた",
+    "text": "「とにかく家に帰らないと、もうすぐアニメ始まっちゃう！」",
+    "nextId": "SCENE_LETSGO"
+  },
+  "SCENE_LETSGO": {
+    "bg": "1st_N.png",
     "hotspots": [
       {
         "x": 350,
@@ -17,6 +23,9 @@
       }
     ]
   },
+
+
+
   "SCENE_COFFEE": {
     "bg": "bg_cafe.png",
     "name": "マスター",
@@ -151,5 +160,23 @@
     "name": null,
     "text": "マスターは殺人鬼だ",
     "nextId": null 
+  },
+  "SCENE_START": {
+    "bg": "1st_N.png",
+    "name": "あなた",
+    "text": "ここはどこだ？俺は何をしていた？",
+    "choices": [
+      { "text": "コーヒーを頼む", "nextId": "SCENE_COFFEE" },
+      { "text": "奥の扉へ向かう", "nextId": "SCENE_DOOR" }
+    ],
+    "hotspots": [
+      {
+        "x": 350,
+        "y": 250,
+        "width": 100,
+        "height": 150,
+        "actionId": "CHECK_DOOR_LOCK"
+      }
+    ]
   }
 }
