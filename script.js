@@ -14,7 +14,6 @@ const charName = document.getElementById('character-name');
 const dialogueText = document.getElementById('dialogue-text');
 const choicesContainer = document.getElementById('choices-container');
 const nextButton = document.getElementById('next-button');
-const FKnextButton = document.getElementById('FK-next-button');
 const endButton = document.getElementById('end-button');
 const screenArea = document.getElementById('screen-area'); // ★これを追加！
 
@@ -68,6 +67,7 @@ function renderScene(id) {
     // --- 描画処理 ---
     // 背景画像の変更（指定があれば）
     if (data.bg) {
+        gameContainer.style.backgroundImage = `url('images/${data.bg}')`;
         screenArea.style.backgroundImage = `url('images/${data.bg}')`;
     }
 
@@ -76,14 +76,14 @@ function renderScene(id) {
     dialogueText.textContent = data.text || "";
 
     //次へボタンの更新
-    FKnextButton.textContent = "▼"; 
+    nextButton.textContent = "▼"; 
 
     // 選択肢のクリア
     choicesContainer.innerHTML = "";
 
     // 選択肢の表示 または 「次へ」ボタンの表示
     if (data.choices && data.choices.length > 0) {
-        FKnextButton.style.display = "none";
+        nextButton.style.display = "none";
         data.choices.forEach(choice => {
             const btn = document.createElement('button');
             btn.textContent = choice.text;
@@ -93,13 +93,13 @@ function renderScene(id) {
     } else {
         // 次のシーンがある場合のみボタンを表示
         if (data.nextId) {
-            FKnextButton.style.display = "block";
+            nextButton.style.display = "block";
             nextButton.onclick = () => renderScene(data.nextId);
         } else {
             // 行き止まり・終了時の処理
-            FKnextButton.style.display = "block"; // 1. ボタンを画面に出す
-            FKnextButton.textContent = "最初にもどる"; // 2. ボタンの文字を書き換える
-            FKnextButton.onclick = () => renderScene("SCENE_START"); // 3. 最初のシーン名を渡す
+            nextButton.style.display = "block"; // 1. ボタンを画面に出す
+            nextButton.textContent = "最初にもどる"; // 2. ボタンの文字を書き換える
+            nextButton.onclick = () => renderScene("SCENE_START"); // 3. 最初のシーン名を渡す
         }
     };
 
@@ -113,13 +113,13 @@ function renderScene(id) {
             div.style.width = spot.width + 'px';
             div.style.height = spot.height + 'px';
             div.style.cursor = 'pointer';
-            
+
             // ★開発中は以下の行を生かして赤枠を表示。本番では削除（またはコメントアウト）して透明にする！
             div.style.border = '2px solid red'; 
 
             // クリックされたら指定されたIDのシーンへ飛ぶ
             div.onclick = () => renderScene(spot.actionId);
-            
+
             hotspotsLayer.appendChild(div);
         });
     }    
@@ -136,7 +136,7 @@ startButton.addEventListener('click', async () => {
 
     // ここでBGMを再生！クリックした後なので確実に鳴ります
     bgm.play();
-    
+
     await loadGame();
     renderScene(currentId);
 });
