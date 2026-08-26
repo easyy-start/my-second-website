@@ -20,7 +20,14 @@
         "width": 52,
         "height": 27,
         "actionId": "check_door_password"
-      }
+      },
+      {
+        "x": 500,
+        "y": 300,
+        "width": 52,
+        "height": 27,
+        "actionId": "check_door_password"
+      },
     ]
   },
   "check_door_password": {
