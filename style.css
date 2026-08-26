@@ -11,7 +11,7 @@ body {
 
 #game-container {
     width: 800px;
-    height: 600px;
+    height: 800px;
     background-color: #000;
     background-size: cover;
     position: relative;
