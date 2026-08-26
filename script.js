@@ -16,6 +16,9 @@ const choicesContainer = document.getElementById('choices-container');
 const nextButton = document.getElementById('next-button');
 const endButton = document.getElementById('end-button');
 const screenArea = document.getElementById('screen-area'); // ★これを追加！
+const passwordContainer = document.getElementById('password-container');
+const passwordInput = document.getElementById('password-input');
+const passwordSubmit = document.getElementById('password-submit');
 
 // 0. JSONの読み込み
 async function loadGame() {
@@ -122,7 +125,39 @@ function renderScene(id) {
 
             hotspotsLayer.appendChild(div);
         });
-    }    
+    };
+    // ▼パスワード機能▼
+    // 場面切り替え時にリセット
+    passwordContainer.style.display = "none";
+    passwordInput.value = "";
+    choicesContainer.innerHTML = "";
+    nextButton.style.display = "none";
+
+    // ▼新機能：パスワード判定システム▼
+    if (data.passwordCheck) {
+        // パスワード機能が設定されているシーンなら、入力欄を表示
+        passwordContainer.style.display = "block";
+        
+        // 「解除」ボタンが押されたときの処理
+        passwordSubmit.onclick = () => {
+            const userInput = passwordInput.value; // 入力された文字を取得
+            
+            // 正解かどうか判定して、指定のシーンへ飛ばす
+            if (userInput === data.passwordCheck.correctAnswer) {
+                renderScene(data.passwordCheck.ifTrue); // 正解のシーンへ
+            } else {
+                renderScene(data.passwordCheck.ifFalse); // 不正解のシーンへ
+            }
+        };
+    } 
+    // パスワード入力が無い場合は、通常の選択肢か「次へ」ボタンを表示
+    else if (data.choices && data.choices.length > 0) {
+        // (既存の choices の処理)
+    } else if (data.nextId) {
+        // (既存の nextId の処理)
+    } else {
+        // (既存の 最初に戻る処理)
+    }
 }
 
 // スタートボタンのイベント
