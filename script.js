@@ -127,37 +127,51 @@ function renderScene(id) {
         });
     };
     // ▼パスワード機能▼
-    // 場面切り替え時にリセット
-    passwordContainer.style.display = "none";
-    passwordInput.value = "";
+    // --- UIの表示リセット ---
     choicesContainer.innerHTML = "";
     nextButton.style.display = "none";
+    passwordContainer.style.display = "none";
+    passwordInput.value = "";
 
-    // ▼新機能：パスワード判定システム▼
+    // --- ここからUIの表示判定（どれか1つだけが表示される） ---
+    
+    // パターン1：パスワード入力画面の場合
     if (data.passwordCheck) {
-        // パスワード機能が設定されているシーンなら、入力欄を表示
         passwordContainer.style.display = "block";
-        
-        // 「解除」ボタンが押されたときの処理
         passwordSubmit.onclick = () => {
-            const userInput = passwordInput.value; // 入力された文字を取得
-            
-            // 正解かどうか判定して、指定のシーンへ飛ばす
+            const userInput = passwordInput.value;
             if (userInput === data.passwordCheck.correctAnswer) {
-                renderScene(data.passwordCheck.ifTrue); // 正解のシーンへ
+                renderScene(data.passwordCheck.ifTrue);
             } else {
-                renderScene(data.passwordCheck.ifFalse); // 不正解のシーンへ
+                renderScene(data.passwordCheck.ifFalse);
             }
         };
     } 
-    // パスワード入力が無い場合は、通常の選択肢か「次へ」ボタンを表示
+    // パターン2：選択肢がある場合
     else if (data.choices && data.choices.length > 0) {
-        // (既存の choices の処理)
-    } else if (data.nextId) {
-        // (既存の nextId の処理)
-    } else {
-        // (既存の 最初に戻る処理)
+        data.choices.forEach(choice => {
+            const btn = document.createElement('button');
+            btn.textContent = choice.text;
+            btn.onclick = () => renderScene(choice.nextId);
+            choicesContainer.appendChild(btn);
+        });
+    } 
+    // パターン3：「次へ」進むシーンの場合
+    else if (data.nextId) {
+        nextButton.style.display = "block";
+        nextButton.onclick = () => renderScene(data.nextId);
+    } 
+    // パターン4：どれにも当てはまらない（行き止まり・ゲームクリア）場合
+    else {
+        nextButton.style.display = "block";
+        nextButton.textContent = "最初にもどる";
+        nextButton.onclick = () => {
+            nextButton.textContent = "次へ"; // テキストを元に戻しておく
+            renderScene("SCENE_START");
+        };
     }
+
+    // --- (この下から当たり判定(hotspots)の生成処理が続く) ---
 }
 
 // スタートボタンのイベント
