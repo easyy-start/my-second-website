@@ -161,7 +161,7 @@
     "text": "マスターは殺人鬼だ",
     "nextId": null 
   },
-  "SCENE_START": {
+  "SCENE_notSTART": {
     "bg": "1st_N.png",
     "name": "あなた",
     "text": "ここはどこだ？俺は何をしていた？",
