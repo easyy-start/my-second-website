@@ -24,14 +24,14 @@
       {
         "x": 543,
         "y": 290,
-        "width": 253,
+        "width": 53,
         "height": 47,
         "actionId": "SCENE_fir_E"
       },
       {
         "x": 0,
         "y": 290,
-        "width": 253,
+        "width": 53,
         "height": 47,
         "actionId": "SCENE_fir_W"
       }
@@ -57,28 +57,28 @@
       {
         "x": 543,
         "y": 290,
-        "width": 253,
+        "width": 53,
         "height": 47,
         "actionId": "SCENE_fir_N"
       },
       {
         "x": 0,
         "y": 290,
-        "width": 253,
+        "width": 53,
         "height": 47,
         "actionId": "SCENE_fir_S"
       },
       {
         "x": 400,
         "y": 400,
-        "width": 253,
+        "width": 53,
         "height": 47,
         "actionId": "SCENE_fir_N"
       },
       {
         "x": 100,
         "y": 100,
-        "width": 253,
+        "width": 53,
         "height": 47,
         "actionId": "SCENE_fir_S"
       }
