@@ -94,7 +94,7 @@ function renderScene(id) {
         // 次のシーンがある場合のみボタンを表示
         if (data.nextId) {
             FKnextButton.style.display = "block";
-            FKnextButton.onclick = () => renderScene(data.nextId);
+            nextButton.onclick = () => renderScene(data.nextId);
         } else {
             // 行き止まり・終了時の処理
             FKnextButton.style.display = "block"; // 1. ボタンを画面に出す
