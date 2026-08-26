@@ -14,6 +14,7 @@ const charName = document.getElementById('character-name');
 const dialogueText = document.getElementById('dialogue-text');
 const choicesContainer = document.getElementById('choices-container');
 const nextButton = document.getElementById('next-button');
+const FKnextButton = document.getElementById('FK-next-button');
 const endButton = document.getElementById('end-button');
 const screenArea = document.getElementById('screen-area'); // ★これを追加！
 
@@ -75,14 +76,14 @@ function renderScene(id) {
     dialogueText.textContent = data.text || "";
 
     //次へボタンの更新
-    nextButton.textContent = "▼"; 
+    FKnextButton.textContent = "▼"; 
 
     // 選択肢のクリア
     choicesContainer.innerHTML = "";
 
     // 選択肢の表示 または 「次へ」ボタンの表示
     if (data.choices && data.choices.length > 0) {
-        nextButton.style.display = "none";
+        FKnextButton.style.display = "none";
         data.choices.forEach(choice => {
             const btn = document.createElement('button');
             btn.textContent = choice.text;
@@ -92,13 +93,13 @@ function renderScene(id) {
     } else {
         // 次のシーンがある場合のみボタンを表示
         if (data.nextId) {
-            nextButton.style.display = "block";
-            nextButton.onclick = () => renderScene(data.nextId);
+            FKnextButton.style.display = "block";
+            FKnextButton.onclick = () => renderScene(data.nextId);
         } else {
             // 行き止まり・終了時の処理
-            nextButton.style.display = "block"; // 1. ボタンを画面に出す
-            nextButton.textContent = "最初にもどる"; // 2. ボタンの文字を書き換える
-            nextButton.onclick = () => renderScene("SCENE_START"); // 3. 最初のシーン名を渡す
+            FKnextButton.style.display = "block"; // 1. ボタンを画面に出す
+            FKnextButton.textContent = "最初にもどる"; // 2. ボタンの文字を書き換える
+            FKnextButton.onclick = () => renderScene("SCENE_START"); // 3. 最初のシーン名を渡す
         }
     };
 
