@@ -137,14 +137,21 @@
         "actionId": "SCENE_fir_E"
       },
       {
-        "x": 348,
-        "y": 257,
-        "width": 52,
-        "height": 27,
+        "x": 165,
+        "y": 54,
+        "width": 260,
+        "height": 487,
         "actionId": "check_backdoor"
       }
     ]
   },
+   "check_backdoor": {
+    "bg": "1st_S.png",
+    "text": "ドアだ。こちらからは開かないようだ。",
+    "nextId": "SCENE_fir_S"
+  },
+
+  
   "SCENE_fir_E": {
     "bg": "1st_E.png",
     "hotspots": [
