@@ -86,7 +86,8 @@ body {
     color: #000;
 }
 
-#FK-next-button {
+
+#next-button {
     position: absolute;
     bottom: 10px;
     right: 15px;
@@ -96,21 +97,6 @@ body {
     font-size: 24px;
     cursor: pointer;
     animation: blink 1s infinite; /* 点滅アニメーション */
-}
-
-#next-button {
-    /* relative から absolute に変更して、親要素(#ui-layer)に被せる */
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; /* 親と同じ高さになるので200px指定不要になります */
-    
-    background: transparent; /* 完全な透明に */
-    border: none; /* ボーダーは親要素(#ui-layer)に任せる */
-    cursor: pointer;
-    z-index: 100; /* テキストより手前、選択肢ボタンよりは奥にするなどの調整用 */
-    display: none;
 }
     
 
