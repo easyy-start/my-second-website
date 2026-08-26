@@ -184,6 +184,118 @@
     "nextId": "SCENE_fir_E"
   },
 
+  "SCENE_fir_open": {
+    "bg": "1st_N.png",
+    "text": "ドアが開いた。",
+    "nextId": "SCENE_sec_N"
+  },
+  "SCENE_sec_N": {
+    "bg": "2nd_N.png",
+    "hotspots": [
+      {
+        "x": 348,
+        "y": 257,
+        "width": 52,
+        "height": 27,
+        "actionId": "check_door_password2"
+      },
+      {
+        "x": 543,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_sec_E"
+      },
+      {
+        "x": 0,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_sec_W"
+      }
+    ]
+  },
+  "SCENE_sec_W": {
+    "bg": "2nd_W.png",
+    "hotspots": [
+      {
+        "x": 348,
+        "y": 257,
+        "width": 52,
+        "height": 27,
+        "actionId": "check_door_password2"
+      },
+      {
+        "x": 543,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_sec_N"
+      },
+      {
+        "x": 0,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_sec_S"
+      }
+    ]
+  },
+  "SCENE_sec_E": {
+    "bg": "2nd_E.png",
+    "hotspots": [
+      {
+        "x": 348,
+        "y": 257,
+        "width": 52,
+        "height": 27,
+        "actionId": "check_door_password2"
+      },
+      {
+        "x": 543,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_sec_S"
+      },
+      {
+        "x": 0,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_sec_N"
+      }
+    ]
+  },
+  "SCENE_sec_S": {
+    "bg": "2nd_S.png",
+    "hotspots": [
+      {
+        "x": 348,
+        "y": 257,
+        "width": 52,
+        "height": 27,
+        "actionId": "check_door_password2"
+      },
+      {
+        "x": 543,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_sec_W"
+      },
+      {
+        "x": 0,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_sec_E"
+      }
+    ]
+  },
+  
+  
+
 
   "SCENE_COFFEE": {
     "bg": "bg_cafe.png",
