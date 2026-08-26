@@ -15,6 +15,7 @@ const dialogueText = document.getElementById('dialogue-text');
 const choicesContainer = document.getElementById('choices-container');
 const nextButton = document.getElementById('next-button');
 const endButton = document.getElementById('end-button');
+const screenArea = document.getElementById('screen-area'); // ★これを追加！
 
 // 0. JSONの読み込み
 async function loadGame() {
@@ -66,7 +67,7 @@ function renderScene(id) {
     // --- 描画処理 ---
     // 背景画像の変更（指定があれば）
     if (data.bg) {
-        gameContainer.style.backgroundImage = `url('images/${data.bg}')`;
+        screenArea.style.backgroundImage = `url('images/${data.bg}')`;
     }
 
     // テキストの更新
