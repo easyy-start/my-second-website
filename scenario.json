@@ -19,9 +19,14 @@
         "y": 250,
         "width": 100,
         "height": 150,
-        "actionId": "CHECK_DOOR_LOCK"
+        "actionId": "look_door_password"
       }
     ]
+  },
+  "look_door_password": {
+    "bg": "1st_N.png",
+    "text": "パスワードを入力できるようだ。",
+    "nextId": "check_door_password"
   },
 
 
