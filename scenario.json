@@ -1,6 +1,6 @@
 {
   "SCENE_START": {
-    "bg": "bg_cafe.png",
+    "bg": "1st_N.png",
     "name": "あなた",
     "text": "ここはどこだ？俺は何をしていた？",
     "choices": [
