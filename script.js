@@ -170,8 +170,6 @@ function renderScene(id) {
             renderScene("SCENE_START");
         };
     }
-
-    // --- (この下から当たり判定(hotspots)の生成処理が続く) ---
 }
 
 // スタートボタンのイベント
