@@ -17,8 +17,8 @@
       {
         "x": 348,
         "y": 257,
-        "width": 100,
-        "height": 150,
+        "width": 52,
+        "height": 27,
         "actionId": "check_door_password"
       }
     ]
