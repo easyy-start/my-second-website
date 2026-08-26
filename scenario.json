@@ -91,6 +91,34 @@
       }
     ]
   },
+  "check_clock": {
+    "bg": "1st_W.png",
+    "text": "時計だ。文字盤がない。",
+    "nextId": "check_clock_th"
+  },
+  "check_clock_th": {
+    "bg": "1st_W.png",
+    "name": "あなた",
+    "text": "「変な時計だな。もう3時か、帰らないと！」",
+    "nextId": "SCENE_fir_W"
+  },
+  "check_consent": {
+    "bg": "1st_W.png",
+    "text": "コンセントだ。",
+    "nextId": "SCENE_fir_W"
+  },
+  "check_memo": {
+    "bg": "1st_W.png",
+    "text": "張り紙に何か書いてある。",
+    "nextId": "check_memo_lo"
+  },
+  "check_memo_lo": {
+    "bg": "1st_W.png",
+    "name": "メモ",
+    "text": "北は５つ、西は７つに分けられる。時刻に右の数を足せばよい。",
+    "nextId": "SCENE_fir_W"
+  },
+  
   "SCENE_fir_S": {
     "bg": "1st_S.png",
     "hotspots": [
