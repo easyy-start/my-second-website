@@ -480,21 +480,21 @@
 
 
   "SCENE_sec_S": {
-    "bg": "2nd_E.png",
+    "bg": "2nd_S.png",
     "hotspots": [
       {
         "x": 543,
         "y": 290,
         "width": 53,
         "height": 47,
-        "actionId": "SCENE_fir_W"
+        "actionId": "SCENE_sec_W"
       },
       {
         "x": 0,
         "y": 290,
         "width": 53,
         "height": 47,
-        "actionId": "SCENE_fir_E"
+        "actionId": "SCENE_sec_E"
       },
       {
         "x": 165,
