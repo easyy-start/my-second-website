@@ -366,13 +366,6 @@
     "bg": "2nd_E.png",
     "hotspots": [
       {
-        "x": 348,
-        "y": 257,
-        "width": 52,
-        "height": 27,
-        "actionId": "check_door_password2"
-      },
-      {
         "x": 543,
         "y": 290,
         "width": 53,
@@ -385,9 +378,35 @@
         "width": 53,
         "height": 47,
         "actionId": "SCENE_sec_N"
+      },
+      {
+        "x": 65,
+        "y": 308,
+        "width": 101,
+        "height": 119,
+        "actionId": "check_spider"
+      },
+      {
+        "x": 352,
+        "y": 351,
+        "width": 157,
+        "height": 191,
+        "actionId": "check_rocker"
       }
     ]
   },
+  "check_spider": {
+    "bg": "2nd_E.png",
+    "text": "クモの巣だ。",
+    "nextId": "check_spiderfly"
+  },
+  "check_rocker": {
+    "bg": "2nd_W.png",
+    "text": "頑丈そうな金庫だ。",
+    "nextId": "check_rockerch"
+  },
+
+  
   "SCENE_sec_S": {
     "bg": "2nd_S.png",
     "hotspots": [
