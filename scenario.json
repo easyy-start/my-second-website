@@ -482,8 +482,15 @@
   "check_rocker_open": {
     "bg": "2nd_E.png",
     "text": "金庫が開いた。メモを手に入れた。",
+    "nextId": "check_rockermemo"
+  },
+  "check_rockermemo": {
+    "bg": "2nd_E.png",
+    "name": "メモ",
+    "text": "『喋るクモは2匹いる。』",
     "nextId": "SCENE_sec_E"
   },
+
 
 
   "SCENE_sec_S": {
