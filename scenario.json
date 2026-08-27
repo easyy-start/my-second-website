@@ -479,35 +479,37 @@
   },
 
 
-  
   "SCENE_sec_S": {
-    "bg": "2nd_S.png",
+    "bg": "2nd_E.png",
     "hotspots": [
-      {
-        "x": 348,
-        "y": 257,
-        "width": 52,
-        "height": 27,
-        "actionId": "check_door_password2"
-      },
       {
         "x": 543,
         "y": 290,
         "width": 53,
         "height": 47,
-        "actionId": "SCENE_sec_W"
+        "actionId": "SCENE_fir_W"
       },
       {
         "x": 0,
         "y": 290,
         "width": 53,
         "height": 47,
-        "actionId": "SCENE_sec_E"
+        "actionId": "SCENE_fir_E"
+      },
+      {
+        "x": 165,
+        "y": 54,
+        "width": 260,
+        "height": 487,
+        "actionId": "check_backdoor2"
       }
     ]
   },
-  
-  
+   "check_backdoor2": {
+    "bg": "2nd_E.png",
+    "text": "ドアだ。こちらからは開かないようだ。",
+    "nextId": "SCENE_sec_S"
+  },
 
 
   "SCENE_COFFEE": {
