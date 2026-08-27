@@ -413,6 +413,13 @@
     "text": "やあ。ごはんをくれたらヒントを教えてやるよ。",
     "nextId": "check_spidercho"
   },
+  "check_spiderprecho": {
+    "condition": {
+      "item": "小バエ",
+      "ifTrue": "check_spidercho",
+      "ifFalse": "check_spiderrej"
+    }
+  },
   "check_spidercho": {
     "bg": "2nd_E.png",
     "text": "何かあげてみる？",
