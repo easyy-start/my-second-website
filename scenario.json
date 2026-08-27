@@ -411,7 +411,7 @@
     "bg": "2nd_E.png",
     "name": "クモ",
     "text": "やあ。ごはんをくれたらヒントを教えてやるよ。",
-    "nextId": "check_spidercho"
+    "nextId": "check_spiderprecho"
   },
   "check_spiderprecho": {
     "condition": {
