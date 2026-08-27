@@ -513,7 +513,7 @@
     ]
   },
    "check_backdoor2": {
-    "bg": "2nd_E.png",
+    "bg": "2nd_S.png",
     "text": "ドアだ。こちらからは開かないようだ。",
     "nextId": "SCENE_sec_S"
   },
