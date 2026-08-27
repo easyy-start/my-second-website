@@ -307,13 +307,20 @@
   "check_fly1": {
     "bg": "2nd_W.png",
     "text": "小バエが飛んでいる。",
-    "nextId": "SCENE_sec_W"
+    "nextId": "get_fly"
   },
   "check_fly2": {
     "bg": "2nd_W.png",
     "text": "小バエが飛んでいる。",
+    "nextId": "get_fly"
+  },
+   "get_fly": {
+    "bg": "2nd_W.png",
+    "text": "『小バエ』を手に入れた！",
+    "getItem": "小バエ",
     "nextId": "SCENE_sec_W"
   },
+  
   "check_tacos": {
     "bg": "2nd_W.png",
     "text": "タコスだ。",
@@ -400,11 +407,69 @@
     "text": "クモの巣だ。",
     "nextId": "check_spiderfly"
   },
+  "check_spiderfly": {
+    "bg": "2nd_E.png",
+    "name": "クモ",
+    "text": "やあ。ごはんをくれたらヒントを教えてやるよ。",
+    "nextId": "check_spiderflych"
+  },
+  "check_spiderflych": {
+    "condition": {
+      "item": "小バエ",
+      "ifTrue": "check_spiderans",
+      "ifFalse": "check_spiderrej"
+    }
+  },
+  "check_spiderrej": {
+    "bg": "2nd_E.png",
+    "name": "クモ",
+    "text": "はやくごはんもってきなよ。",
+    "nextId": "check_spiderfai"
+  },
+  "check_spiderfai": {
+    "bg": "2nd_E.png",
+    "name": "あなた",
+    "text": "「なんだこいつ。」",
+    "nextId": "SCENE_sec_E"
+  },
+  "check_spiderans": {
+    "bg": "2nd_E.png",
+    "name": "クモ",
+    "text": "まぁこれでいいや。",
+    "nextId": "check_spidernex"
+  },
+  "check_spidernex": {
+    "bg": "2nd_E.png",
+    "name": "クモ",
+    "text": "あぁヒントだっけ？そこの金庫に「4242」って入力すればいいよ。",
+    "nextId": "SCENE_sec_E"
+  },
+
   "check_rocker": {
-    "bg": "2nd_W.png",
+    "bg": "2nd_E.png",
     "text": "頑丈そうな金庫だ。",
     "nextId": "check_rockerch"
   },
+  "check_rockerch": {
+    "bg": "2nd_E.png",
+    "text": "ロックされている。パスワードが必要らしい。",
+    "passwordCheck": {
+      "correctAnswer": "4242",
+      "ifTrue": "check_rocker_open",
+      "ifFalse": "check_rocker_closed"
+    }
+  },
+  "check_rocker_closed": {
+    "bg": "2nd_E.png",
+    "text": "パスワードが違うようだ。",
+    "nextId": "SCENE_sec_E"
+  },
+  "check_rocker_open": {
+    "bg": "2nd_E.png",
+    "text": "金庫が開いた。メモを手に入れた。",
+    "nextId": "SCENE_sec_E"
+  },
+
 
   
   "SCENE_sec_S": {
