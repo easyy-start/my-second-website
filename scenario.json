@@ -215,6 +215,25 @@
       }
     ]
   },
+  "check_door_password2": {
+    "bg": "2nd_N.png",
+    "text": "ロックされている。パスワードが必要らしい。",
+    "passwordCheck": {
+      "correctAnswer": "9696",
+      "ifTrue": "SCENE_sec_open",
+      "ifFalse": "SCENE_sec_closed"
+    }
+  },
+  "SCENE_sec_closed": {
+    "bg": "2nd_N.png",
+    "text": "パスワードが違うようだ。",
+    "nextId": "SCENE_sec_N"
+  },
+  "SCENE_sec_open": {
+    "bg": "2nd_N.png",
+    "text": "ドアが開いた。",
+    "nextId": "SCENE_thi_N"
+  },
   "SCENE_sec_W": {
     "bg": "2nd_W.png",
     "hotspots": [
@@ -399,8 +418,61 @@
         "width": 157,
         "height": 191,
         "actionId": "check_rocker"
+      },
+      {
+        "x": 469,
+        "y": 498,
+        "width": 46,
+        "height": 41,
+        "actionId": "check_secspider"
       }
     ]
+  },
+  "check_secspider": {
+    "bg": "2nd_E.png",
+    "name": "クモ",
+    "text": "あ？なんだよ。",
+    "nextId": "check_secspiderprecho"
+  },
+  "check_secspiderprecho": {
+    "condition": {
+      "item": "小バエ",
+      "ifTrue": "check_secspidercho",
+      "ifFalse": "check_secspiderrej"
+    }
+  },
+  "check_secspidercho": {
+    "bg": "2nd_E.png",
+    "text": "何かあげてみる？",
+    "choices": [
+      { "text": "小バエを与える", "nextId": "check_secspiderflych" },
+      { "text": "やめておく", "nextId": "SCENE_sec_E" }
+    ]
+  },
+  "check_secspiderflych": {
+    "condition": {
+      "item": "小バエ",
+      "ifTrue": "check_secspiderans",
+      "ifFalse": "check_secspiderrej"
+    }
+  },
+  "check_secspiderrej": {
+    "bg": "2nd_E.png",
+    "name": "クモ",
+    "text": "邪魔するな。",
+    "nextId": "SCENE_sec_E"
+  },
+  "check_secspiderans": {
+    "bg": "2nd_E.png",
+    "name": "クモ",
+    "text": ".....。",
+    "nextId": "check_secspidernex"
+  },
+  "check_secspidernex": {
+    "bg": "2nd_E.png",
+    "name": "クモ",
+    "text": "9696。",
+    "nextId": "SCENE_sec_E"
   },
   "check_spider": {
     "bg": "2nd_E.png",
@@ -525,159 +597,35 @@
     "nextId": "SCENE_sec_S"
   },
 
-
-  "SCENE_COFFEE": {
-    "bg": "bg_cafe.png",
-    "name": "マスター",
-    "text": "はいよ。…おや、足元に何か落ちているぞ。",
-    "getItem": "銀の鍵",
-    "nextId": "SCENE_GET_KEY"
-  },
-  "SCENE_GET_KEY": {
-    "bg": "bg_cafe.png",
-    "name": "システム",
-    "text": "『銀の鍵』を手に入れた！",
-    "nextId": "SCENE_START"
-  },
-  "SCENE_DOOR": {
-    "bg": "bg_door.png",
-    "name": "AKI",
-    "text": "怪しい扉がある…。調べてみよう。",
-    "nextId": "CHECK_DOOR_LOCK"
-  },
-  "CHECK_DOOR_LOCK": {
-    "condition": {
-      "item": "銀の鍵",
-      "ifTrue": "SCENE_UNLOCK",
-      "ifFalse": "SCENE_LOCKED"
-    }
-  },
-  "SCENE_LOCKED": {
-    "bg": "bg_door.png",
-    "name": "AKI",
-    "text": "鍵がかかっていて開かない。お店の中を探してみよう。",
-    "nextId": "SCENE_START"
-  },
-  "SCENE_UNLOCK": {
-    "bg": "bg_door.png",
-    "name": "システム",
-    "text": "銀の鍵を使った！ガチャリと音がして扉が開いた。",
-    "nextId": "SCENE_ENDING"
-  },
-  "SCENE_ENDING": {
-    "bg": "bg_door.png",
-    "name": "AKI",
-    "text": "よし、中に入ってみよう……。",
-    "nextId": "SCENE_SECOND"
-  },
-
-  "SCENE_SECOND": {
-    "bg": "library_gemini.png",
-    "name": "AKI",
-    "text": "ここは、図書室か？",
-    "nextId": "SCENE_SECOND_ROOM"
-  },
-  "SCENE_SECOND_ROOM": {
-    "bg": "library_gemini.png",
-    "name": "AKI",
-    "text": "どこを調べてみよう...",
-    "choices": [
-      { "text": "本棚", "nextId": "SCENE_BOOKSHELF" },
-      { "text": "観葉植物", "nextId": "SCENE_PLANT" },
-      { "text": "机", "nextId": "SCENE_DESK" },
-      { "text": "管理人室", "nextId": "CHECK_MasterRoom_Lock" }
-    ]
-  }, 
-  "SCENE_BOOKSHELF": {
-    "bg": "library_gemini.png",
-    "name": "AKI",
-    "text": "テーマごとに本棚が分かれている。特に変わったところはない。",
-    "nextId": "SCENE_SECOND_ROOM"
-  },
-  "SCENE_PLANT": {
-    "bg": "library_gemini.png",
-    "name": "AKI",
-    "text": "ふつうの観葉植物だ。特に変わったところはない。",
-    "nextId": "SCENE_PLANT2"
-  },
-  "SCENE_PLANT2": {
-    "bg": "library_gemini.png",
-    "name": "AKI",
-    "text": "どこを調べてみよう...",
-    "choices": [
-      { "text": "本棚", "nextId": "SCENE_BOOKSHELF" },
-      { "text": "観葉植物", "nextId": "SCENE_PLANT_ITEM" },
-      { "text": "机", "nextId": "SCENE_DESK" },
-      { "text": "管理人室", "nextId": "CHECK_MasterRoom_Lock" }
-    ]
-  }, 
-  "SCENE_PLANT_ITEM": {
-    "bg": "library_gemini.png",
-    "name": "AKI",
-    "text": "ふつうの観葉植物だ.....おや？根本が一瞬光った。",
-    "getItem": "古びた鍵",
-    "nextId": "SCENE_GetItem_OldKey"
-  },
-  "SCENE_GetItem_OldKey": {
-    "bg": "library_gemini.png",
-    "name": "システム",
-    "text": "『古びた鍵』を手に入れた！",
-    "nextId": "SCENE_SECOND_ROOM"
-  },
-  "SCENE_DESK": {
-    "bg": "library_gemini.png",
-    "name": "AKI",
-    "text": "さっきまで人がいたみたいだ。どこに行ったんだ？",
-    "nextId": "SCENE_SECOND_ROOM" 
-  },
-  "CHECK_MasterRoom_Lock": {
-    "condition": {
-      "item": "古びた鍵",
-      "ifTrue": "SCENE_UNLOCK_MasterRoom",
-      "ifFalse": "SCENE_LOCKED_MasterRoom"
-    }  
-  },
-  "SCENE_UNLOCK_MasterRoom": {
-    "bg": "library_gemini.png",
-    "name": "システム",
-    "text": "古びた鍵を使った！ギギギと音を立てながらドアが開いた。",
-    "nextId": "SCENE_MasterRoom"
-  },
-   "SCENE_LOCKED_MasterRoom": {
-    "bg": "library_gemini.png",
-    "name": "システム",
-    "text": "鍵がかかっていて開かない。もう一度図書室を調べてみよう。",
-    "nextId": "SCENE_SECOND_ROOM"
-  },
-  "SCENE_MasterRoom": {
-    "bg": "library_gemini.png",
-    "name": "AKI",
-    "text": "机の上に手紙が置いてある、なんだろう",
-    "nextId": "SCENE_MasterRoom_Letter" 
-  },  
-  "SCENE_MasterRoom_Letter": {
-    "bg": null, 
-    "name": null,
-    "text": "マスターは殺人鬼だ",
-    "nextId": null 
-  },
-  "SCENE_notSTART": {
-    "bg": "1st_N.png",
-    "name": "あなた",
-    "text": "ここはどこだ？俺は何をしていた？",
-    "choices": [
-      { "text": "コーヒーを頼む", "nextId": "SCENE_COFFEE" },
-      { "text": "奥の扉へ向かう", "nextId": "SCENE_DOOR" }
-    ],
+  "SCENE_thi_N": {
+    "bg": "3rd_N.png",
     "hotspots": [
       {
-        "x": 350,
-        "y": 250,
-        "width": 100,
-        "height": 150,
-        "actionId": "CHECK_DOOR_LOCK"
+        "x": 358,
+        "y": 257,
+        "width": 52,
+        "height": 27,
+        "actionId": "check_door_password3"
+      },
+      {
+        "x": 543,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_thi_E"
+      },
+      {
+        "x": 0,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_thi_W"
       }
     ]
-  }
+  },
+
+
+ 
+    
   
 }
