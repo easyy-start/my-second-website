@@ -233,13 +233,6 @@
         "actionId": "SCENE_sec_S"
       },
       {
-        "x": 348,
-        "y": 257,
-        "width": 52,
-        "height": 27,
-        "actionId": "check_door_password2"
-      },
-      {
         "x": 350,
         "y": 182,
         "width": 15,
@@ -310,6 +303,62 @@
         "actionId": "check_knife"
       }
     ]
+  },
+  "check_fly1": {
+    "bg": "2nd_W.png",
+    "text": "小バエが飛んでいる。",
+    "nextId": "SCENE_sec_W"
+  },
+  "check_fly2": {
+    "bg": "2nd_W.png",
+    "text": "小バエが飛んでいる。",
+    "nextId": "SCENE_sec_W"
+  },
+  "check_tacos": {
+    "bg": "2nd_W.png",
+    "text": "タコスだ。",
+    "nextId": "SCENE_sec_W"
+  },
+  "check_hamburger": {
+    "bg": "2nd_W.png",
+    "text": "ハンバーガーだ。",
+    "nextId": "SCENE_sec_W"
+  },
+  "check_carrot": {
+    "bg": "2nd_W.png",
+    "text": "にんじんだ。",
+    "nextId": "SCENE_sec_W"
+  },
+  "check_apple": {
+    "bg": "2nd_W.png",
+    "text": "りんごだ。",
+    "nextId": "SCENE_sec_W"
+  },
+  "check_pumpkinpie": {
+    "bg": "2nd_W.png",
+    "text": "かぼちゃパイだ。",
+    "nextId": "SCENE_sec_W"
+  },
+  "check_pizza": {
+    "bg": "2nd_W.png",
+    "text": "ピッツァだ。",
+    "nextId": "SCENE_sec_W"
+  },
+  "check_chicken": {
+    "bg": "2nd_W.png",
+    "text": "大きなチキンだ。",
+    "nextId": "SCENE_sec_W"
+  },
+  "check_knife": {
+    "bg": "2nd_W.png",
+    "text": "チキンに金属製のピックが刺さっている。",
+    "nextId": "get_knife"
+  },
+  "get_knife": {
+    "bg": "2nd_W.png",
+    "text": "『ピック』を手に入れた！",
+    "getItem": "ピック",
+    "nextId": "SCENE_sec_W"
   },
 
   
