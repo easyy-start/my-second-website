@@ -627,7 +627,7 @@
     "bg": "3rd_N.png",
     "text": "ロックされている。パスワードが必要らしい。",
     "passwordCheck": {
-      "correctAnswer": "9696",
+      "correctAnswer": "wow",
       "ifTrue": "SCENE_thi_open",
       "ifFalse": "SCENE_thi_closed"
     }
@@ -796,15 +796,28 @@
   },
   "check_bird": {
     "bg": "3rd_W.png",
-    "text": "インコがこちらを見ている。",
+    "text": "インコがいる。",
     "nextId": "check_birdta"
   },
   "check_birdta": {
     "bg": "3rd_E.png",
     "name": "インコ",
-    "text": "",
-    "nextId": "SCENE_thi_W"
+    "text": "wow! びっくりした！",
+    "nextId": "check_birdta2"
   },
+  "check_birdta2": {
+    "bg": "3rd_E.png",
+    "name": "インコ",
+    "text": "そこのドアのパスワードはたった3文字さ。",
+    "nextId": "check_birdta3"
+  },
+  "check_birdta3": {
+    "bg": "3rd_E.png",
+    "name": "インコ",
+    "text": "答えが知りたいなら、誰かを驚かせたらいいよ！",
+    "nextId": "SCENE_thi_E"
+  },
+  
    
     
   
