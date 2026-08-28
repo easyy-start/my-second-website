@@ -601,13 +601,6 @@
     "bg": "3rd_N.png",
     "hotspots": [
       {
-        "x": 358,
-        "y": 257,
-        "width": 52,
-        "height": 27,
-        "actionId": "check_door_password3"
-      },
-      {
         "x": 543,
         "y": 290,
         "width": 53,
@@ -620,6 +613,91 @@
         "width": 53,
         "height": 47,
         "actionId": "SCENE_thi_W"
+      },
+      {
+        "x": 358,
+        "y": 257,
+        "width": 52,
+        "height": 27,
+        "actionId": "check_door_password3"
+      }
+    ]
+  },
+  "SCENE_thi_W": {
+    "bg": "3rd_W.png",
+    "hotspots": [
+      {
+        "x": 543,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_thi_N"
+      },
+      {
+        "x": 0,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_thi_S"
+      },
+      {
+        "x": 358,
+        "y": 257,
+        "width": 52,
+        "height": 27,
+        "actionId": "check_door_password3"
+      }
+    ]
+  },
+  "SCENE_thi_S": {
+    "bg": "3rd_S.png",
+    "hotspots": [
+      {
+        "x": 543,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_thi_W"
+      },
+      {
+        "x": 0,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_thi_E"
+      },
+      {
+        "x": 358,
+        "y": 257,
+        "width": 52,
+        "height": 27,
+        "actionId": "check_door_password3"
+      }
+    ]
+  },
+  "SCENE_thi_E": {
+    "bg": "3rd_E.png",
+    "hotspots": [
+      {
+        "x": 543,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_thi_S"
+      },
+      {
+        "x": 0,
+        "y": 290,
+        "width": 53,
+        "height": 47,
+        "actionId": "SCENE_thi_N"
+      },
+      {
+        "x": 358,
+        "y": 257,
+        "width": 52,
+        "height": 27,
+        "actionId": "check_door_password3"
       }
     ]
   }
