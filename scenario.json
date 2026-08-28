@@ -41,7 +41,7 @@
     "bg": "1st_N.png",
     "text": "ロックされている。パスワードが必要らしい。",
     "passwordCheck": {
-      "correctAnswer": "1504",
+      "correctAnswer": "0304",
       "ifTrue": "SCENE_fir_open",
       "ifFalse": "SCENE_fir_closed"
     }
@@ -99,7 +99,7 @@
   "check_clock_th": {
     "bg": "1st_W.png",
     "name": "あなた",
-    "text": "「変な時計だな。もう15時か、帰らないと！」",
+    "text": "「変な時計だな。もう3時か、帰らないと！」",
     "nextId": "SCENE_fir_W"
   },
   "check_consent": {
