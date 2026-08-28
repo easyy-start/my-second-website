@@ -623,6 +623,25 @@
       }
     ]
   },
+  "check_door_password3": {
+    "bg": "3rd_N.png",
+    "text": "ロックされている。パスワードが必要らしい。",
+    "passwordCheck": {
+      "correctAnswer": "9696",
+      "ifTrue": "SCENE_thi_open",
+      "ifFalse": "SCENE_thi_closed"
+    }
+  },
+  "SCENE_thi_closed": {
+    "bg": "3rd_N.png",
+    "text": "パスワードが違うようだ。",
+    "nextId": "SCENE_thi_N"
+  },
+  "SCENE_thi_open": {
+    "bg": "2nd_N.png",
+    "text": "ドアが開いた。",
+    "nextId": "SCENE_fir_N"
+  },
   "SCENE_thi_W": {
     "bg": "3rd_W.png",
     "hotspots": [
@@ -670,6 +689,40 @@
       },
     ]
   },
+  "check_impmemo": {
+    "bg": "3rd_W.png",
+    "text": "メモがある。",
+    "nextId": "check_impmemolo"
+  },
+  "check_impmemolo": {
+    "bg": "3rd_E.png",
+    "name": "メモ",
+    "text": "正しく入力すれば、正しい場所にドアは繋がる。",
+    "nextId": "SCENE_thi_W"
+  },
+  "check_impdev": {
+    "bg": "3rd_W.png",
+    "text": "何やら複雑な機械がある。触らないでおこう。",
+    "nextId": "SCENE_thi_W"
+  },
+  "check_gradev": {
+    "bg": "3rd_W.png",
+    "text": "『重力装置　正常』",
+    "nextId": "check_gradevth"
+  },
+  "check_gradevth": {
+    "bg": "3rd_E.png",
+    "name": "あなた",
+    "text": "なんだこれ...?",
+    "nextId": "SCENE_thi_W"
+  },
+  "check_usedcon": {
+    "bg": "3rd_W.png",
+    "text": "機械のコードがコンセントに繋がれている。抜かない方がよさそうだ。",
+    "nextId": "SCENE_thi_W"
+  },
+
+  
   "SCENE_thi_S": {
     "bg": "3rd_S.png",
     "hotspots": [
@@ -696,6 +749,13 @@
       }
     ]
   },
+  "check_backdoor3": {
+    "bg": "3rd_S.png",
+    "text": "ドアだ。こちらからは開かないようだ。",
+    "nextId": "SCENE_thi_S"
+  },
+
+  
   "SCENE_thi_E": {
     "bg": "3rd_E.png",
     "hotspots": [
@@ -728,10 +788,24 @@
         "actionId": "check_bird"
       }
     ]
-  }
-
-
- 
+  },
+  "check_window": {
+    "bg": "3rd_W.png",
+    "text": "窓だ。街並みが逆さまに映っている。",
+    "nextId": "check_window"
+  },
+  "check_bird": {
+    "bg": "3rd_W.png",
+    "text": "インコがこちらを見ている。",
+    "nextId": "check_birdta"
+  },
+  "check_birdta": {
+    "bg": "3rd_E.png",
+    "name": "インコ",
+    "text": "",
+    "nextId": "SCENE_thi_W"
+  },
+   
     
   
 }
