@@ -688,11 +688,11 @@
         "actionId": "SCENE_thi_E"
       },
       {
-        "x": 358,
-        "y": 257,
-        "width": 52,
-        "height": 27,
-        "actionId": "check_door_password3"
+        "x": 165,
+        "y": 54,
+        "width": 260,
+        "height": 487,
+        "actionId": "check_backdoor3"
       }
     ]
   },
@@ -714,11 +714,18 @@
         "actionId": "SCENE_thi_N"
       },
       {
-        "x": 358,
-        "y": 257,
-        "width": 52,
-        "height": 27,
-        "actionId": "check_door_password3"
+        "x": 57,
+        "y": 148,
+        "width": 384,
+        "height": 298,
+        "actionId": "check_window"
+      },
+      {
+        "x": 465,
+        "y": 429,
+        "width": 81,
+        "height": 81,
+        "actionId": "check_bird"
       }
     ]
   }
