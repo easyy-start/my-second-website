@@ -642,11 +642,32 @@
       },
       {
         "x": 358,
-        "y": 257,
-        "width": 52,
-        "height": 27,
-        "actionId": "check_door_password3"
-      }
+        "y": 256,
+        "width": 100,
+        "height": 121,
+        "actionId": "check_impmemo"
+      },
+      {
+        "x": 57,
+        "y": 250,
+        "width": 128,
+        "height": 78,
+        "actionId": "check_impdev"
+      },
+      {
+        "x": 88,
+        "y": 410,
+        "width": 121,
+        "height": 132,
+        "actionId": "check_gradev"
+      },
+      {
+        "x": 28,
+        "y": 477,
+        "width": 31,
+        "height": 63,
+        "actionId": "check_usedcon"
+      },
     ]
   },
   "SCENE_thi_S": {
