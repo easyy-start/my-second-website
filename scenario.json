@@ -832,9 +832,13 @@
     "nextId": "SCENE_thi_E"
   },
   "check_blackout": {
-    "bg": "3rd_W.png",
+    "text": "激しい音と共に火花が散ったあと、目の前が真っ暗になった。停電だ。",
+    "nextId": "SCENE_blackout2"
+  },
+  "check_blackout2": {
+    "bg": "1st_W.png",
     "text": "。",
-    "nextId": "check_window"
+    "nextId": "SCENE_blackout2"
   },
    
     
