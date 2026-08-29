@@ -147,8 +147,14 @@ function renderScene(id) {
     if (data.passwordCheck) {
         passwordContainer.style.display = "block";
         passwordSubmit.onclick = () => {
-            const userInput = passwordInput.value;
-            if (userInput === data.passwordCheck.correctAnswer) {
+            // ▼ ここから変更 ▼
+            // 入力された文字を強制的に「小文字」に変換する
+            const userInput = passwordInput.value.toLowerCase();
+            
+            // JSONに書かれている正解も、念のため「小文字」に変換して比較する
+            const correctAnswer = data.passwordCheck.correctAnswer.toLowerCase();
+
+            if (userInput === correctAnswer) {
                 renderScene(data.passwordCheck.ifTrue);
             } else {
                 renderScene(data.passwordCheck.ifFalse);
