@@ -696,7 +696,7 @@
     "text": "ロックされている。パスワードが必要らしい。",
     "passwordCheck": {
       "correctAnswer": "mom",
-      "ifTrue": "SCENE_fir_open",
+      "ifTrue": "SCENE_FINAL",
       "ifFalse": "SCENE_fir_closed"
     }
   },
@@ -909,6 +909,11 @@
     "bg":"1st_N.png",
     "text": "しばらくして照明が戻った。非常用電源が作動したようだ。",
     "nextId": "SCENE_fir_N"
+  },
+  "SCENE_FINAL": {
+    "bg": "blackout.png",
+    "text": "足元がふわりと浮き上がり、天井に激突した。",
+    "nextId": "SCENE_refir_N"
   }
    
     
