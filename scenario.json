@@ -920,6 +920,9 @@
     "text": "何が起きていたのか、なぜ俺だったのかは考えられなかった。俺は家に向かって駆け出した。",
     "nextId": "SCENE_FINAL3"
   },
+  "SCENE_FINAL3": {
+    "bg": "final_N2.png"
+  }
   
    
     
