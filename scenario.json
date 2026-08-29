@@ -832,17 +832,17 @@
     "nextId": "SCENE_thi_E"
   },
   "check_blackout": {
-    "bg": blackout.png
-    "text": "激しい音と共に火花が散ったあと、目の前が真っ暗になった。",
+    "bg":blackout.png
+    "text":"激しい音と共に火花が散ったあと、目の前が真っ暗になった。",
     "nextId": "check_blackout2"
   },
   "check_blackout2": {
-    "bg": blackout.png
-    "text": "足元がふわりと浮き上がり、天井に激突した。",
+    "bg":blackout.png
+    "text":"足元がふわりと浮き上がり、天井に激突した。",
     "nextId": "SCENE_refir_N"
   },
   "SCENE_refir_N": {
-    "bg": "1st_N.png",
+    "bg":"1st_N.png",
     "isReversed": true,
     "text": "しばらくして照明が戻った。非常用電源が作動したようだ。",
     "nextId": "SCENE_refir_N"
