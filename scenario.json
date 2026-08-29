@@ -105,7 +105,7 @@
     "text": "コンセントだ。",
     "nextId": "check_consentchpre"
   },
-  "get_consentchpre": {
+  "check_consentchpre": {
     "condition": {
       "item": "停電後",
       "ifTrue": "SCENE_fir_W",
