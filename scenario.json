@@ -709,7 +709,7 @@
     "nextId": "check_impmemolo"
   },
   "check_impmemolo": {
-    "bg": "3rd_E.png",
+    "bg": "3rd_W.png",
     "name": "メモ",
     "text": "正しく入力すれば、正しい場所にドアは繋がる。",
     "nextId": "SCENE_thi_W"
