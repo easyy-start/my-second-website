@@ -73,11 +73,12 @@ function renderScene(id) {
         gameContainer.style.backgroundImage = `url('images/${data.bg}')`;
         screenArea.style.backgroundImage = `url('images/${data.bg}')`;
     }
-    // ★指定がある（true）ときだけ回転、指定がない（未記入）なら元に戻す
-    if (data.isReversed === true) {
+    // 2. ★追加：特定のアイテムを持っているかチェックして背景を反転させる
+    // （"重力反転装置" の部分は、実際のゲーム内のアイテム名に合わせてください）
+    if (gameState.inventory.includes("停電後")) {
         screenArea.style.transform = 'rotate(180deg)';
     } else {
-        screenArea.style.transform = 'none'; // 回転をリセット
+        screenArea.style.transform = 'none'; // 持っていなければ元に戻す
     }
 
     // テキストの更新
