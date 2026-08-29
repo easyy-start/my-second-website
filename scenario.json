@@ -911,10 +911,16 @@
     "nextId": "SCENE_fir_N"
   },
   "SCENE_FINAL": {
-    "bg": "blackout.png",
-    "text": "足元がふわりと浮き上がり、天井に激突した。",
-    "nextId": "SCENE_refir_N"
-  }
+    "bg": "final_N.png",
+    "text": "扉がひらくと、青空が広がっている。",
+    "nextId": "SCENE_FINAL2"
+  },
+  "SCENE_FINAL2": {
+    "bg": "final_N.png",
+    "text": "何が起きていたのか、なぜ俺だったのかは考えられなかった。俺は家に向かって駆け出した。",
+    "nextId": "SCENE_FINAL3"
+  },
+  
    
     
   
