@@ -354,12 +354,19 @@
   "check_fly1": {
     "bg": "2nd_W.png",
     "text": "小バエが飛んでいる。",
-    "nextId": "get_fly"
+    "nextId": "get_flypre"
   },
   "check_fly2": {
     "bg": "2nd_W.png",
     "text": "小バエが飛んでいる。",
-    "nextId": "get_fly"
+    "nextId": "get_flypre"
+  },
+  "get_flypre": {
+    "condition": {
+      "item": "小バエ",
+      "ifTrue": "SCENE_sec_W",
+      "ifFalse": "get_fly"
+    }
   },
    "get_fly": {
     "bg": "2nd_W.png",
@@ -406,7 +413,14 @@
   "check_knife": {
     "bg": "2nd_W.png",
     "text": "チキンに金属製のピックが刺さっている。",
-    "nextId": "get_knife"
+    "nextId": "get_knifepre"
+  },
+  "get_knifepre": {
+    "condition": {
+      "item": "ピック",
+      "ifTrue": "SCENE_sec_W",
+      "ifFalse": "get_knife"
+    }
   },
   "get_knife": {
     "bg": "2nd_W.png",
