@@ -247,7 +247,7 @@
     "bg": "2nd_N.png",
     "text": "ロックされている。パスワードが必要らしい。",
     "passwordCheck": {
-      "correctAnswer": "9696",
+      "correctAnswer": "0300",
       "ifTrue": "SCENE_sec_open",
       "ifFalse": "SCENE_sec_closed"
     }
