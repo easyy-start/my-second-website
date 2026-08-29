@@ -485,7 +485,7 @@
   "check_secspidernex": {
     "bg": "2nd_E.png",
     "name": "クモ",
-    "text": "9696。",
+    "text": "いまの時刻を入れればいいだけだ。もう行ってくれ。",
     "nextId": "SCENE_sec_E"
   },
   "check_spider": {
