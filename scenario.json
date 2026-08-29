@@ -652,7 +652,7 @@
     "nextId": "SCENE_thi_N"
   },
   "SCENE_thi_open": {
-    "bg": "2nd_N.png",
+    "bg": "3rd_N.png",
     "text": "ドアが開いた。",
     "nextId": "SCENE_fir_N"
   },
@@ -700,7 +700,7 @@
         "width": 31,
         "height": 63,
         "actionId": "check_usedcon"
-      },
+      }
     ]
   },
   "check_impmemo": {
@@ -806,7 +806,7 @@
   "check_window": {
     "bg": "3rd_W.png",
     "text": "窓だ。街並みが逆さまに映っている。",
-    "nextId": "check_window"
+    "nextId": "SCENE_thi_E"
   },
   "check_bird": {
     "bg": "3rd_W.png",
@@ -832,7 +832,11 @@
     "nextId": "SCENE_thi_E"
   },
   "check_blackout": {
-    "text": "激しい音と共に火花が散ったあと、目の前が真っ暗になった。停電だ。",
+    "text": "激しい音と共に火花が散ったあと、目の前が真っ暗になった。",
+    "nextId": "check_blackout2"
+  },
+  "check_blackout2": {
+    "text": "足元がふわりと浮き上がり、天井に激突した。",
     "nextId": "SCENE_refir_N"
   },
   "SCENE_refir_N": {
