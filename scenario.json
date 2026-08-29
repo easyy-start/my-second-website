@@ -833,13 +833,14 @@
   },
   "check_blackout": {
     "text": "激しい音と共に火花が散ったあと、目の前が真っ暗になった。停電だ。",
-    "nextId": "SCENE_blackout2"
+    "nextId": "SCENE_refir_N"
   },
-  "check_blackout2": {
-    "bg": "1st_W.png",
-    "text": "。",
-    "nextId": "SCENE_blackout2"
-  },
+  "SCENE_refir_N": {
+    "bg": "1st_N.png",
+    "isReversed": true,
+    "text": "しばらくして照明が戻った。非常用電源が作動したようだ。",
+    "nextId": "SCENE_refir_N"
+    }
    
     
   
