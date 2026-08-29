@@ -191,7 +191,6 @@ function renderScene(id) {
             // 単なる設定ミスや、意図しない行き止まりの場合はボタンを隠す
             nextButton.style.display = "none";
         }
-        };
     }
 }
 
