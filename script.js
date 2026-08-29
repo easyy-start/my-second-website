@@ -178,11 +178,19 @@ function renderScene(id) {
     } 
     // パターン4：どれにも当てはまらない（行き止まり・ゲームクリア）場合
     else {
-        nextButton.style.display = "block";
-        nextButton.textContent = "最初にもどる";
-        nextButton.onclick = () => {
-            nextButton.textContent = "次へ"; // テキストを元に戻しておく
-            renderScene("SCENE_START");
+        // --- 修正箇所 ---
+        if (data.isEnding) {
+            // 真のエンディング・ゲームオーバーの場合
+            nextButton.style.display = "block";
+            nextButton.textContent = "最初に戻る";
+            nextButton.onclick = () => {
+                gameState.inventory = []; // 持ち物をリセットする場合
+                renderScene("SCENE_START");
+            };
+        } else {
+            // 単なる設定ミスや、意図しない行き止まりの場合はボタンを隠す
+            nextButton.style.display = "none";
+        }
         };
     }
 }
