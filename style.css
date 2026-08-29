@@ -86,7 +86,15 @@ body {
     color: #000;
 }
 
-
+#next-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    color: #ffcc00;
+    font-size: 24px;
+    animation: blink 1s infinite;
+    pointer-events: none; /* ★ このアイコン自体はクリック判定を持たないようにする */
+}
 #next-button {
     /* 親要素（#ui-layer）を基準にして絶対配置にする */
     position: absolute; 
