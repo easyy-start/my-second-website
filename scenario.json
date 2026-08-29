@@ -725,7 +725,7 @@
     "nextId": "check_gradevth"
   },
   "check_gradevth": {
-    "bg": "3rd_E.png",
+    "bg": "3rd_W.png",
     "name": "あなた",
     "text": "なんだこれ...?",
     "nextId": "SCENE_thi_W"
