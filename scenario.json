@@ -103,7 +103,14 @@
   "check_consent": {
     "bg": "1st_W.png",
     "text": "コンセントだ。",
-    "nextId": "check_consentch"
+    "nextId": "check_consentchpre"
+  },
+  "get_consentchpre": {
+    "condition": {
+      "item": "停電後",
+      "ifTrue": "SCENE_fir_W",
+      "ifFalse": "check_consentch"
+    }
   },
   "check_consentch": {
     "condition": {
