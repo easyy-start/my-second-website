@@ -37,6 +37,22 @@
       }
     ]
   },
+  "check_door_passwordpre": {
+    "condition": {
+      "item": "停電後",
+      "ifTrue": "check_redoor_password",
+      "ifFalse": "check_door_password"
+    }
+  },
+  "check_redoor_password": {
+    "bg": "1st_N.png",
+    "text": "ロックされている。パスワードが必要らしい。",
+    "passwordCheck": {
+      "correctAnswer": "OIL",
+      "ifTrue": "SCENE_fir_open",
+      "ifFalse": "SCENE_fir_closed"
+    }
+  },
   "check_door_password": {
     "bg": "1st_N.png",
     "text": "ロックされている。パスワードが必要らしい。",
@@ -193,7 +209,7 @@
         "y": 257,
         "width": 52,
         "height": 27,
-        "actionId": "check_door_password2"
+        "actionId": "check_door_password2pre"
       },
       {
         "x": 543,
@@ -210,6 +226,22 @@
         "actionId": "SCENE_sec_W"
       }
     ]
+  },
+  "check_door_password2pre": {
+    "condition": {
+      "item": "停電後",
+      "ifTrue": "check_redoor_password2",
+      "ifFalse": "check_door_password2"
+    }
+  },
+  "check_redoor_password2": {
+    "bg": "2nd_N.png",
+    "text": "ロックされている。パスワードが必要らしい。",
+    "passwordCheck": {
+      "correctAnswer": "0930",
+      "ifTrue": "SCENE_sec_open",
+      "ifFalse": "SCENE_sec_closed"
+    }
   },
   "check_door_password2": {
     "bg": "2nd_N.png",
@@ -627,9 +659,25 @@
         "y": 257,
         "width": 52,
         "height": 27,
-        "actionId": "check_door_password3"
+        "actionId": "check_door_password3pre"
       }
     ]
+  },
+  "check_door_password3pre": {
+    "condition": {
+      "item": "停電後",
+      "ifTrue": "check_redoor_password3",
+      "ifFalse": "check_door_password3"
+    }
+  },
+  "check_redoor_password3": {
+    "bg": "3rd_N.png",
+    "text": "ロックされている。パスワードが必要らしい。",
+    "passwordCheck": {
+      "correctAnswer": "mom",
+      "ifTrue": "SCENE_fir_open",
+      "ifFalse": "SCENE_fir_closed"
+    }
   },
   "check_door_password3": {
     "bg": "3rd_N.png",
@@ -828,6 +876,7 @@
   "check_blackout": {
     "bg": "blackout.png",
     "text": "激しい音と共に火花が散ったあと、目の前が真っ暗になった。",
+    "getItem": "停電後",
     "nextId": "check_blackout2"
   },
   "check_blackout2": {
@@ -837,9 +886,8 @@
   },
   "SCENE_refir_N": {
     "bg":"1st_N.png",
-    "isReversed": true,
     "text": "しばらくして照明が戻った。非常用電源が作動したようだ。",
-    "nextId": "SCENE_refir_N"
+    "nextId": "SCENE_fir_N"
   }
    
     
