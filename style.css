@@ -88,15 +88,27 @@ body {
 
 
 #next-button {
-    position: absolute;
-    bottom: 10px;
-    right: 15px;
-    background: none;
-    border: none;
-    color: #ffcc00;
-    font-size: 24px;
+    /* 親要素（#ui-layer）を基準にして絶対配置にする */
+    position: absolute; 
+    top: 0;
+    left: 0;
+    
+    /* 幅と高さを親要素（テキストボックス全体）に合わせる */
+    width: 100%;
+    height: 100%; 
+    
+    /* 背景と枠線を透明にする */
+    background: transparent; 
+    border: none; 
+    
+    /* クリックできることを示すカーソルにする */
     cursor: pointer;
-    animation: blink 1s infinite; /* 点滅アニメーション */
+    
+    /* テキストや選択肢より手前に来るようにz-indexを設定（必要に応じて調整） */
+    z-index: 5; 
+    
+    /* 最初は隠しておく */
+    display: none;
 }
     
 
