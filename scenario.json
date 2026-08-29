@@ -804,12 +804,12 @@
     ]
   },
   "check_window": {
-    "bg": "3rd_W.png",
+    "bg": "3rd_E.png",
     "text": "窓だ。街並みが逆さまに映っている。",
     "nextId": "SCENE_thi_E"
   },
   "check_bird": {
-    "bg": "3rd_W.png",
+    "bg": "3rd_E.png",
     "text": "インコがいる。",
     "nextId": "check_birdta"
   },
