@@ -921,7 +921,8 @@
     "nextId": "SCENE_FINAL3"
   },
   "SCENE_FINAL3": {
-    "bg": "final_N2.png"
+    "bg": "final_N2.png",
+    "isEnding": true
   }
   
    
