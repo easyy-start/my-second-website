@@ -73,6 +73,12 @@ function renderScene(id) {
         gameContainer.style.backgroundImage = `url('images/${data.bg}')`;
         screenArea.style.backgroundImage = `url('images/${data.bg}')`;
     }
+    // ★指定がある（true）ときだけ回転、指定がない（未記入）なら元に戻す
+    if (data.isReversed === true) {
+        screenArea.style.transform = 'rotate(180deg)';
+    } else {
+        screenArea.style.transform = 'none'; // 回転をリセット
+    }
 
     // テキストの更新
     charName.textContent = data.name || "";
