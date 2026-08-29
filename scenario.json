@@ -105,7 +105,21 @@
   "check_consent": {
     "bg": "1st_W.png",
     "text": "コンセントだ。",
-    "nextId": "SCENE_fir_W"
+    "nextId": "check_consentch"
+  },
+  "check_consentch": {
+    "condition": {
+      "item": "ピック",
+      "ifTrue": "check_consentac",
+      "ifFalse": "SCENE_fir_W"
+    }
+  },
+   "check_consentac": {
+    "bg": "1st_W.png",
+    "choices": [
+      { "text": "ピックを刺す", "nextId": "check_blackout" },
+      { "text": "やめておく", "nextId": "SCENE_fir_W" }
+    ]
   },
   "check_memo": {
     "bg": "1st_W.png",
@@ -817,7 +831,11 @@
     "text": "答えが知りたいなら、誰かを驚かせたらいいよ！",
     "nextId": "SCENE_thi_E"
   },
-  
+  "check_blackout": {
+    "bg": "3rd_W.png",
+    "text": "。",
+    "nextId": "check_window"
+  },
    
     
   
