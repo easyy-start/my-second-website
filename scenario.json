@@ -38,10 +38,10 @@
     ],
     "images": [
       {
-        "src": "rightarrow.png",  // 表示したいpngファイル名
+        "src": "rightarrow.png", 
         "x": 543,
         "y": 290,
-        "width": 53,         // 表示サイズ（省略して元画像のサイズで表示させるのもアリです）
+        "width": 53, 
         "height": 47
       },
       {
