@@ -46,8 +46,7 @@ function preloadImages(data) {
 
 // レイヤー取得（当たり判定）
 const hotspotsLayer = document.getElementById('hotspots-layer');
-// レイヤー取得（図形）
-const shapesLayer = document.getElementById('shapes-layer');
+
 
 // 2. シーンの描画
 function renderScene(id) {
@@ -145,27 +144,7 @@ function renderScene(id) {
 
     // --- (既存の処理) ---
 
-    // ▼ 自分で用意したpng画像の生成処理を追加
-    if (data.images) {
-        data.images.forEach(item => {
-            const img = document.createElement('img'); // divではなくimgを作る
-            img.src = `images/${item.src}`;            // ★ imagesフォルダに入っている前提
-            img.style.position = 'absolute';
-            img.style.left = item.x + 'px';
-            img.style.top = item.y + 'px';
-            
-            // サイズ指定があれば適用する
-            if (item.width) img.style.width = item.width + 'px';
-            if (item.height) img.style.height = item.height + 'px';
-            
-            // ドット絵をぼやけさせない魔法のスタイル（必要であれば）
-            img.style.imageRendering = 'pixelated'; 
-            
-            shapesLayer.appendChild(img);
-        })
-    };
-
-
+   
     // ▼パスワード機能▼
     // --- UIの表示リセット ---
     choicesContainer.innerHTML = "";
