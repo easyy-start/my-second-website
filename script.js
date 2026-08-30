@@ -132,7 +132,7 @@ function renderScene(id) {
             if (spot.text) {
                 div.textContent = spot.text; // JSONに書いた文字を入れる
                 div.style.color = "red";   // 文字の色（背景に合わせて変えてください）
-                div.style.fontSize = "40px"; // 文字の大きさ
+                div.style.fontSize = "70px"; // 文字の大きさ
                 
                 // 文字をボタン枠のど真ん中に配置する魔法のCSS
                 div.style.display = "flex";
