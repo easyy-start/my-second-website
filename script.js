@@ -139,9 +139,9 @@ function renderScene(id) {
     };
 
     // ▼ シーン移動時に前の画像を消去する
-    //shapesLayer.innerHTML = ""; 
+    shapesLayer.innerHTML = ""; 
     //hotspotsLayer.innerHTML = ""; 
-    //choicesContainer.innerHTML = "";
+    choicesContainer.innerHTML = "";
 
     // --- (既存の処理) ---
 
