@@ -163,6 +163,7 @@ function renderScene(id) {
     nextButton.style.display = "none";
     passwordContainer.style.display = "none";
     passwordInput.value = "";
+    FKnextButton.style.display = "none"; // ★これを追加！巨大ボタン（盾）を消す
 
     // --- ここからUIの表示判定（どれか1つだけが表示される） ---
     
