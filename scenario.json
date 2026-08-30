@@ -35,7 +35,23 @@
         "height": 47,
         "actionId": "SCENE_fir_W"
       }
-    ]
+    ],
+    "images": [
+      {
+        "src": "apple.png",  // 表示したいpngファイル名
+        "x": 150,
+        "y": 200,
+        "width": 60,         // 表示サイズ（省略して元画像のサイズで表示させるのもアリです）
+        "height": 60
+      },
+      {
+        "src": "sword.png", 
+        "x": 400,
+        "y": 250,
+        "width": 80,
+        "height": 80
+      }
+    ],
   },
   "check_door_passwordpre": {
     "condition": {
