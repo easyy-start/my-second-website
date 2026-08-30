@@ -19,6 +19,7 @@ const screenArea = document.getElementById('screen-area'); // ★これを追加
 const passwordContainer = document.getElementById('password-container');
 const passwordInput = document.getElementById('password-input');
 const passwordSubmit = document.getElementById('password-submit');
+const FKnextButton = document.getElementById('FK-next-button');
 
 // 0. JSONの読み込み
 async function loadGame() {
