@@ -128,6 +128,17 @@ function renderScene(id) {
             div.style.height = spot.height + 'px';
             div.style.cursor = 'pointer';
 
+            // ▼▼▼ここから追加！JavaScriptにtextを読ませる指示▼▼▼
+            if (spot.text) {
+                div.textContent = spot.text; // JSONに書いた文字を入れる
+                div.style.color = "red";   // 文字の色（背景に合わせて変えてください）
+                div.style.fontSize = "40px"; // 文字の大きさ
+                
+                // 文字をボタン枠のど真ん中に配置する魔法のCSS
+                div.style.display = "flex";
+                div.style.justifyContent = "center";
+                div.style.alignItems = "center";
+            }
             // ★開発中は以下の行を生かして赤枠を表示。本番では削除（またはコメントアウト）して透明にする！
             div.style.border = '2px solid red'; 
 
