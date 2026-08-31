@@ -145,7 +145,7 @@ function renderScene(id) {
                 div.style.alignItems = "center";
             }
             // ★開発中は以下の行を生かして赤枠を表示。本番では削除（またはコメントアウト）して透明にする！
-            //div.style.border = '2px solid red'; 
+            div.style.border = '2px solid red'; 
 
             // クリックされたら指定されたIDのシーンへ飛ぶ
             div.onclick = () => renderScene(spot.actionId);
