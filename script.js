@@ -211,8 +211,23 @@ function renderScene(id) {
             nextButton.style.display = "block";
             nextButton.textContent = "最初に戻る";
             nextButton.onclick = () => {
+                // 1. ステータス（持ち物）の完全初期化
                 gameState.inventory = []; 
-                renderScene("SCENE_START");
+
+                // 2. 画面UIの初期化（テキストウィンドウを消し、スタートボタンを復活）
+                uiLayer.style.display = "none";
+                startButton.style.display = "block";
+
+                // 3. 画面の見た目（背景・重力反転・レイヤー）のリセット
+                gameContainer.style.backgroundImage = "none";
+                screenArea.style.backgroundImage = "none";
+                screenArea.style.transform = "none"; // 停電の反転を元に戻す
+                hotspotsLayer.innerHTML = "";
+                if (shapesLayer) shapesLayer.innerHTML = "";
+                
+                // ※もしBGMも止めたい場合は以下の2行のコメントアウト（//）を外してください
+                bgm.pause();
+                bgm.currentTime = 0;
             };
         }
     }
