@@ -47,6 +47,8 @@ function preloadImages(data) {
 
 // レイヤー取得（当たり判定）
 const hotspotsLayer = document.getElementById('hotspots-layer');
+//レイヤー取得（図形）
+const shapesLayer = document.getElementById('shapes-layer');
 
 
 // 2. シーンの描画
@@ -89,10 +91,10 @@ function renderScene(id) {
     dialogueText.textContent = data.text || "";
 
     //次へボタンの更新
-    nextButton.textContent = "▼"; 
+    //nextButton.textContent = "▼"; 
 
     // 選択肢のクリア
-    choicesContainer.innerHTML = "";
+    //choicesContainer.innerHTML = "";
 
     // 選択肢の表示 または 「次へ」ボタンの表示
     if (data.choices && data.choices.length > 0) {
@@ -118,6 +120,8 @@ function renderScene(id) {
 
     //場面切り替え時の、当たり判定の消去
     hotspotsLayer.innerHTML = "";
+    if (shapesLayer) shapesLayer.innerHTML = ""; // エラー防止
+    choicesContainer.innerHTML = "";
     // 場面切り替え時の、当たり判定の生成
     if (data.hotspots) {
         data.hotspots.forEach(spot => {
@@ -201,19 +205,15 @@ function renderScene(id) {
         nextButton.onclick = () => renderScene(data.nextId);
     } 
     // パターン4：どれにも当てはまらない（行き止まり・ゲームクリア）場合
+    // パターン4：エンディング（行き止まり）の場合
     else {
-        // --- 修正箇所 ---
         if (data.isEnding) {
-            // 真のエンディング・ゲームオーバーの場合
             nextButton.style.display = "block";
             nextButton.textContent = "最初に戻る";
             nextButton.onclick = () => {
-                gameState.inventory = []; // 持ち物をリセットする場合
+                gameState.inventory = []; 
                 renderScene("SCENE_START");
             };
-        } else {
-            // 単なる設定ミスや、意図しない行き止まりの場合はボタンを隠す
-            nextButton.style.display = "none";
         }
     }
 }
